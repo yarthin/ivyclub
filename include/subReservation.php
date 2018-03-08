@@ -44,7 +44,10 @@
 </div>
 
 
-<?php include_once("include/events_api.php"); ?>
+<?php 
+    include_once("include/events_api.php");
+    //include_once("./events_api.php");
+ ?>
 <script >
     
 jQuery(function(){

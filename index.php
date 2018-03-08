@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>IVY - club & events für ausgelassene Club Nächte in St.Gallen</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,13 +25,9 @@
     <meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
     <meta property="place:location:latitude" content="47.425747">
     <meta property="place:location:longitude" content="9.732654">   
-
-
-</head>
 <?php
     include('./include/header.php')
 ?>
-
     <div class="page-nav-area">
         <a class="prev" href="#" data-slider-nav="prev"><i class="pe-7s-play"></i></a>
         <a class="next" href="#" data-slider-nav="next"><i class="pe-7s-play"></i></a>
@@ -188,11 +183,11 @@
                                    <div class="contact-form">
 										<div id="message"></div>
 										<form method="post" action="include/contact.php" name="contactform" id="contactform">							
-										<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" label="Vorname" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="lastname" label="Nachname"  name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="email" label="Email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="phone" label="Telefon" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
-										<textarea name="comments" aria-required="true" cols="40" label="Mitteilung" rows="3" class="form-control comments" id="comments" placeholder="Mitteilung"></textarea>
+										<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
+										<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
+										<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
+										<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
+										<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" placeholder="Mitteilung"></textarea>
 										<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
 										</form>
 									</div>
@@ -203,22 +198,15 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>   
-</body>
-</html>
-
-    <?php
-        include('./include/js_lib.php')
-    ?>
-    <script type="text/javascript" src="js/fbintro-api.js" defer></script>    
-    <script type="text/javascript" src="js/faba.js" defer></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-    <script type="text/javascript" src="js/insta.js" defer></script>
-
-    <script type="text/javascript" src="js/home.js" defer></script>
-
-
+<link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<?php
+    include('./include/js_lib.php')
+?>
+<script src="js/fbintro-api.js" defer></script>    
+<script src="js/faba.js" defer></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+<script src="js/insta.js" defer></script>
+<script src="js/home.js" defer></script>
 <script type="application/ld+json">
 {
   "@context":"http://schema.org",
@@ -242,3 +230,5 @@
   ]
 }
 </script>
+</body>
+</html>

@@ -15,7 +15,7 @@ pre {
 .hamburger--3dy-r .hamburger-box {
     perspective: 40px
 }
-
+/*
 .ui-button,
 .ui-button:active,
 .ui-button:hover,
@@ -26,7 +26,7 @@ pre {
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor,
 {
     text-decoration: none
-}
+}*/
 
 .slick-loading .slick-slide,
 .slick-loading .slick-track {
@@ -1150,7 +1150,7 @@ body .ui-tooltip {
 
 .slick-list.dragging {
     cursor: pointer;
-    cursor: hand
+    
 }
 
 .slick-slider .slick-list,
@@ -5645,12 +5645,12 @@ blockquote {
 .jobsPage .textBlock1 .title3 {
     margin-bottom: 1rem
 }
-
+/*
 .jobsPage .title4 {
     @iclude tablet {
         margin-bottom: 6rem;
     }
-}
+}*/
 
 .tablesPage {
     padding-top: 7.5rem

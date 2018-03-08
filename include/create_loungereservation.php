@@ -108,7 +108,7 @@ $data = [
     "telno" => $telno,
     "event_id " => $event_id ,
     "event_txt " => $event_txt ,
-    "people_num" => $people_num ,
+    "people_num" => $people_num 
 ];
 
 $ch = curl_init();
@@ -149,7 +149,8 @@ $data = [
     "format" => "xml",
     'customer_id' => $id,
     'lounge_condition_id' => 1,
-    'event_id' => $event_id 
+    'event_id' => $event_id ,
+    "people_num" => $people_num 
 ];
 
 $ch = curl_init();

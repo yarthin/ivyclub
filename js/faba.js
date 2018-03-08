@@ -2083,7 +2083,7 @@
 						        	}
 								}); 
 								if( albumsSort == 'asc' ) albums.data.reverse();
-								console.log('albums.data', albums.data);
+							//	console.log('albums.data', albums.data);
 					        }
 					        $.each( albums.data , function(key, value){
 					        	if( skipAlbums.indexOf( value.id ) == -1 && skipAlbums.indexOf( value.name ) == -1 ) {

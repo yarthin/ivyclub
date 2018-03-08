@@ -52,7 +52,7 @@
         <span>G</span>
     </div>
     
-    <?php include('./subReservation.php'); ?>
+    <?php include('./include/subReservation.php'); ?>
     
     <div id = 'header' >
         <nav>
