@@ -161,8 +161,37 @@ function closeProjects(){
 	
 }
 
+/*
 
-
+function loadSliderJsonData(){
+	$.getJSON('include/calendar.php', function (data) {
+	    //console.log(data);
+	    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	      for (var i = 0; i < data.length ; i++) {
+			    var html = 
+							'<div class="xx" data-animation-down="to-top" data-animation-up="to-bottom">' +
+							'	<img src="' + data[i].image + '" alt="about Image" />' +
+							'</div>' +
+							'<div class="x" data-animation-down="to-top" data-animation-up="to-bottom">' +
+							'	<div class="right-area-wrapper">' +
+							'		<h2 class="title-event"><b>'+data[i].name+'</b></h2>' +
+							'		<p class="">'+ data[i].day + '.' + data[i].month + '.' + data[i].year +'</p>' +
+							'		<p class="desc-event">'+data[i].intro+'</p>' +
+							'	</div>' +
+							'</div>' ;
+				if(w > 479){
+					$('#subslide_' + i).append(html);
+				}
+				else{
+					$('#subslideM_' + i).append(html);
+				}
+			  
+			  
+			}
+    });
+    
+}
+*/
 function loadSliderJsonData(){
 	$.getJSON('include/calendar.php', function (data) {
 	    //console.log(data);
