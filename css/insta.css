@@ -1,0 +1,121 @@
+/* remove bootstrap gutter*/
+.insta .row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.insta .row.no-gutter [class*='col-']:not(:first-child),
+.insta .row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.insta .img-featured-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.insta .img-featured-container img {
+  width: 100%;
+/*   padding: 10px; */
+}
+
+.insta .img-featured-container .img-backdrop {
+  background: linear-gradient(135deg, rgba(38, 163, 255, 0.85), rgba(83, 201, 179, 0.85));
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.insta .img-featured-container:hover > .img-backdrop {
+  opacity: 1;
+}
+
+/* center text horizontally and vertically on image hover */
+.insta .img-featured-container .description-container {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 0 30px;
+  text-align: center;
+  line-height: 20px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  z-index: 2;
+  opacity: 0;
+  transition: all .2s ease;
+}
+
+.insta .img-featured-container .description-container .fa-instagram {
+  font-size: 40px;
+}
+
+.insta .img-featured-container .description-container p {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.insta .img-featured-container:hover .description-container {
+  opacity: 1;
+}
+
+.insta .img-featured-container .description-container .caption {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.insta .img-featured-container .description-container .likes,
+.insta .img-featured-container .description-container .comments {
+  margin: 0 5px;
+}
+
+/* load more button */
+.insta #btn-instafeed-load {
+  color: #fff;
+  background: #26a3ff;
+  font-size: 16px;
+  margin: 20px auto;
+  padding: 8px 40px;
+  display: block;
+  border: none;
+}
+
+.col-sm-6, .col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 100%;
+}
+.col-md-2,
+
+@media (min-width: 768px) {
+  .col-sm-6 {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-4 {
+    float: left;
+    width: 33.33333333%;
+  }
+  .col-md-2{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+    float: left;
+    width: 16.66666667%;
+  }
+}
