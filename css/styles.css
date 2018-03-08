@@ -1402,9 +1402,9 @@ ul.icons{
      background-color: transparent ;
      height: 100%;
 }
- .team-area .swiper-scrollbar-drag, .postcontent .swiper-scrollbar-drag{
+/* .team-area .swiper-scrollbar-drag, .postcontent .swiper-scrollbar-drag{
      border-radius: 2px;
-}
+}*/
 /* SWIPER CONTROL BUTTON */
  .postcontent .swiper-control-wrapper{
      position: absolute;
@@ -2144,8 +2144,12 @@ ul.icons{
      height: 75% !important;
 }
  .faba-intro .fb-album .fb-wrap{
-        height: auto !important;
+        height: 100% !important;
+        cursor: pointer;
     }
+.faba-intro .fb-album .fb-wrap a{
+        display: none !important;
+    }    
  .fb-album .badge{
      position: absolute;
      font-size: 0.8em;
@@ -2433,6 +2437,7 @@ ul.icons{
      position: absolute;
      top: 0;
 }
+/*
  #phnx:after, #aphnx:after{
      background-color: #ccc url('../images/angle-right-circle.png') center no-repeat;
      right: 0;
@@ -2442,7 +2447,7 @@ ul.icons{
      background-color: #ccc url('../images/angle-left-circle.png') center no-repeat;
      left: 0;
      background-size: 20px;
-}
+}*/
 /*#phnx,*/
  .brk:before{
      content: "\203A";

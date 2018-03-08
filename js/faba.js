@@ -61,7 +61,7 @@
 		albLimit : 15,
 	    albumWidth : 300,
 	    albumHeight : 260,
-	    albumsSort: 'random',
+	    albumsSort: 'desc',
 	    albumAnimation : 'HorizontalSlide',
 		albumMarginHorizontal: 10,
 		albumMarginVertical: 10,
@@ -2065,7 +2065,7 @@
 				    	'access_token' : token
 				    },
 				    function (albums) { 
-				    //	console.log(albums);
+				    	//console.log(albums);
 				        if (albums && !albums.error) {
 					        var i = 0;
 					        var g = albums.data.length;
@@ -2083,6 +2083,7 @@
 						        	}
 								}); 
 								if( albumsSort == 'asc' ) albums.data.reverse();
+								console.log('albums.data', albums.data);
 					        }
 					        $.each( albums.data , function(key, value){
 					        	if( skipAlbums.indexOf( value.id ) == -1 && skipAlbums.indexOf( value.name ) == -1 ) {
