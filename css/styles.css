@@ -3065,7 +3065,7 @@
     float: left;
     width: 50%;
 
-}
+    }
 }
 @media (min-width: 992px) {
   .col-md-4 {
@@ -3963,4 +3963,11 @@
         .mobile-row {
             display: block;
         }
+    }
+    .reservHeading{
+        font-size: 4.8em;     
+        margin-left: 0px ! important;   
+    }
+    .contact-heading{
+        font-size: 4.8em;    
     }
