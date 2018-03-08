@@ -21,7 +21,6 @@
     <script type="text/javascript" src="js/pikaday.jquery.min.js" defer></script>
     <script type="text/javascript" src="js/datepicker-slide.js" defer></script>
     <script type="text/javascript" src="js/jquery.contactable.js" defer></script>
-    <script type="text/javascript" src="js/jquery.contactable.js" defer></script>
     <script type="text/javascript" src="js/jquery.jigowatt.js"></script>    
     <!-- script type="text/javascript" src="js/fbintro-api.js" defer></script -->
     <!-- script type="text/javascript" src="js/faba.min.js" defer></script -->

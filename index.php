@@ -151,7 +151,7 @@
                                 <div id="fb-breadcrumbs">
                                     <h5 id="fbgh">Übersicht</h5>
                                 </div>
-                                <div id="faba-inner"></div>
+                                <div id="faba-inner" class = 'faba-intro' ></div>
                                 <div id="fb-photos">
                                     <div class="fbp-container pg-1 clearfix"></div>
                                 </div>
@@ -168,7 +168,7 @@
                     	<div class="content-wrapper">
                         <div class="left-area half-area" data-animation-content="inverse">
                             <div class="writing-wrapper">
-                                <h2 class="heading"><b>Kontakt</b></h2>
+                                <h2 class="heading contact-heading"><b>Kontakt</b></h2>
 								<div class="address">
                                     <h3 class="title">IVY – CLUB & EVENTS</h3>
                                     <h6 class="desc">

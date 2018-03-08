@@ -8,7 +8,7 @@
  * Copyright 2016 Themeflection
  */
 (function($) { 
-//	"use strict";
+	"use strict";
 	
   $.fn.faba = function(options){
   	// set defaults

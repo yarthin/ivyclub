@@ -148,6 +148,7 @@ var swiper = new Swiper('.swiper-container', {
 		
 	});//EOF SCROLL
 	
+
 	
 })(jQuery);
 
@@ -416,6 +417,11 @@ jQuery(document).ready(function($){
                 isLateralNavAnimating = false;
             });
         }
+    });
+
+
+    $('.faba-intro').click(function() {
+    	location.href = './photos' ;
     });
 
 });

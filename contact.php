@@ -25,7 +25,6 @@
 	<meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
 	<meta property="place:location:latitude" content="47.425747">
 	<meta property="place:location:longitude" content="9.732654">
-
 <?php
     include('./include/header.php')
 ?>
@@ -108,9 +107,10 @@
 	
 </body>
 </html>
-    <?php
+     <?php
         include('./include/js_lib.php')
-    ?>   
+    ?>
+    
 <script type="application/ld+json"> { 
 "@context" : "http://schema.org",
 "@type" : "LocalBusiness", 
