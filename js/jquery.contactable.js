@@ -135,11 +135,12 @@
                         });
                         var data = JSON.parse(data);
                         if (data.response === 'success') {
-                            jQuery('#contactable-callback').show().append(options.recievedMsg);
+                            //jQuery('#contactable-callback').show().append(options.recievedMsg);
+                            jQuery('#contactable-callback').show().append(data.msg);
                             if (options.hideOnSubmit === !0) {
                                 setTimeout(function() {
                                     jQuery('#contactable-inner').click()
-                                }, 3500)
+                                }, 5500)
                             }
                         } else {
                             jQuery('#contactable-callback').show().append(options.notRecievedMsg);

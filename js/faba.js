@@ -1980,6 +1980,7 @@
 		}
 
 	    function afterFirstAlbumsLoad(albums, cached){
+	    //	console.log(albums);
 		  	var albumsInner = $('#faba-inner');
 	    	albumsInner.find('.imgdiv').waitForImages(true).done(function(){
 				albumsInner.find('.fb-album').velocity('stop').velocity(anm['album']['in'], { stagger: 32,
@@ -2077,15 +2078,19 @@
 					        if( albumsSort != 'random' ) {
 					        	albums.data.sort(function(x, y){ 
 						        	if( x.cover_photo && y.cover_photo ) {
-						        		 var date1 = new Date(x.cover_photo.created_time); 
+						        		/* var date1 = new Date(x.cover_photo.created_time); 
 									     var  date2 = new Date(y.cover_photo.created_time);
-									      return date1 - date2 ;
+									      return date1 - date2 ;*/
+
+									     return x.id - y.id ;
+
 						        	}
 								}); 
 								if( albumsSort == 'asc' ) albums.data.reverse();
 							//	console.log('albums.data', albums.data);
 					        }
 					        $.each( albums.data , function(key, value){
+					        	
 					        	if( skipAlbums.indexOf( value.id ) == -1 && skipAlbums.indexOf( value.name ) == -1 ) {
 						        	FB.api(
 									    '/' + value.id + '/picture',
@@ -2121,6 +2126,7 @@
 												var cbg = setInterval(function(){
 													if( hd.total === hd.current ) {
 														clearInterval(cbg);
+														//console.log('init', albums);
 														afterFirstAlbumsLoad(albums);
 													}
 												},100);

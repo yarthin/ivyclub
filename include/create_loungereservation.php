@@ -35,36 +35,16 @@ if(trim($firstname) == '') {
 	exit();
 }
 
-
-// Configuration option.
-// Enter the email address that you want to emails to be sent to.
-// Example $address = "joe.doe@yourdomain.com";
-
-
 $address = "daniel@ivyclub.ch";
-
-// Configuration option.
-// i.e. The standard subject will appear as, "You've been contacted by John Doe."
-
-// Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
 $e_subject = 'Reservation via ivyclub.ch von: ' . $firstname . ' ' . $lastname . '';
 
-
-// Configuration option.
-// You can change this if you feel that you need to.
-// Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
-
 $e_content = "Name: $firstname $lastname" . PHP_EOL . PHP_EOL;
 $e_reply = "E-Mail: $email". PHP_EOL . PHP_EOL;
-//$c_reply = "Telefon: ".$phone." ". PHP_EOL . PHP_EOL;
-//$e_body = "Nachricht: ".$comments." ". PHP_EOL . PHP_EOL;
 $c_reply = "Telefon: ".$telno." ". PHP_EOL . PHP_EOL;
 $e_body = "Nachricht: ".$event_txt." ". PHP_EOL . PHP_EOL;
 $num_body = "Anzahl Person: ".$people_num." ". PHP_EOL . PHP_EOL;
 
-
-//$msg = wordwrap( $e_content . $e_reply . $c_reply . $e_body, 70 );
 $msg = ( $e_content . $e_reply . $c_reply . $e_body . $num_body );
 
 $headers = "From: $email" . PHP_EOL;
@@ -75,14 +55,12 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
 if(mail($address, $e_subject, $msg, $headers)) {
 
-	// Email has sent successfully, echo a success page.
+  $event_txt_leng = strlen($event_txt);
+  $disp_date  = substr($event_txt, ($event_txt_leng-10), $event_txt_leng);
+  $disp_date  = str_replace('-', '.', $disp_date);
+  $disp_txt   = substr($event_txt, 0, ($event_txt_leng-10));
 
-	//echo "<div id='success_page'>";
-	//echo "<h1>Reservation verschickt.</h1>";
-	//echo "<p>Vielen Dank <strong>$firstname</strong> <strong>$lastname</strong>, wir haben deine Nachricht erhalten und melden uns umgehend bei dir.</p>";
-	//echo "</div>";
-
-  $data['msg'] = "<div id='success_page'> <h1>Reservation erhalten.</h1><p>Vielen Dank <strong>$firstname</strong> <strong>$lastname</strong> für deine Reservation am <strong>$event_id</strong> Event wir melden uns bei dir.</p></div>";
+  $data['msg'] = "<div id='success_page'> <h1>Reservation erhalten.</h1><p>Vielen Dank <strong>$firstname</strong> <strong>$lastname</strong> für deine Reservation am <strong>$disp_date - $disp_txt</strong> Event wir melden uns bei dir.</p></div>";
   $data['response'] = 'success' ;
   echo json_encode($data);
 
@@ -122,27 +100,10 @@ $result = simplexml_load_string($resultRaw);
 
 assertHttpStatusCode($ch, 200);
 
-/* curl -X POST \
-  https://api.sparkpost.com/api/v1/transmissions \
-  -H "Authorization: 5471c8fadfc48f52c0897a069b552616ebf3a858" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "options": {
-      "sandbox": true
-    },
-    "content": {
-      "from": "sandbox@sparkpostbox.com",
-      "subject": "Thundercats are GO!!!",
-      "text": "Sword of Omens, give me sight BEYOND sight"
-    },
-    "recipients": [{ "address": "daniel@ivyclub.ch" }]
-}' */
 
 curl_close($ch);
 
 $id = (string) $result->customer["id"];
-
-//echo "<div id='success_page'><h1>Reservation erhalten.</h1><p>\nVielen Dank {$firstname} {$lastname} wir haben deine Reservation erhalten.\n</p></div>";
 
 $data = [
     "apikey" => $clubzone_apikey,
@@ -159,12 +120,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 curl_exec($ch);
-
-//$resultRaw = curl_exec($ch);
-//$result = simplexml_load_string($resultRaw);
-
-/* comment here */
-/* printResult($ch, $result, $data); */
 
 assertHttpStatusCode($ch, 200);
 
