@@ -165,6 +165,7 @@ function closeProjects(){
 function loadSliderJsonData(){
 	$.getJSON('include/calendar.php', function (data) {
 	    //console.log(data);
+	    data = data.reverse();
 	    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	      for (var i = 0; i < data.length ; i++) {
 			    var html = 

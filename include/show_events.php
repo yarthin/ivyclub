@@ -10,23 +10,46 @@ $showEvents = $clubzone_host . "/events/index";
 $data = [
     "apikey" => $clubzone_apikey,
     "format" => "xml",
-	"club_id" => 2,
+    "club_id" => 2,
     "from" => date("Y-m-d")
 ];
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $showEvents);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, count($data));
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-$resultRaw = curl_exec($ch);
-$result = simplexml_load_string($resultRaw);
+$result = simplexml_load_string(getResult($clubzone_host . "/events/index", $data));
+print_r($result);
+foreach ($result->event as $event) {
+    $event_id = (string) $event->id;
 
-printResult($ch, $result, $data);
-assertHttpStatusCode($ch, 200);
+    echo "EVENT {$event_id}\n";
 
-curl_close($ch);
+    $reservations = json_decode(getResult($clubzone_host . "/lounges2/reservations", [
+        "apikey" => $clubzone_apikey,
+        "format" => "json",
+        "event_id" => $event_id
+    ]));
+    
 
+    foreach ($reservations->reservations as $reservation) {
+        echo "- {$reservation->customer->firstname} {$reservation->customer->lastname} ({$reservation->lounges})\n";
+        echo "<br>";
+    }
+
+    echo "\n";
+}
+
+
+function getResult($url, $data) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, count($data));
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    $resultRaw = curl_exec($ch);
+    assertHttpStatusCode($ch, 200);
+
+    curl_close($ch);
+
+    return $resultRaw;
+}
 
 function assertHttpStatusCode($ch, $statusCode)
 {
@@ -37,13 +60,9 @@ function printResult($ch, $result, $requestData)
 {
     echo "request: \n";
     echo json_encode($requestData, JSON_PRETTY_PRINT);
-    echo "\nresponse code: " . curl_getinfo($ch)["http_code"] . "\n";
-    if (curl_getinfo($ch)["http_code"] != 204) {
-        echo "response:\n";
-        echo json_encode($result, JSON_PRETTY_PRINT);
-    }
-    echo "\n\n now create events";
+
+    echo "response:\n";
+    echo json_encode($result, JSON_PRETTY_PRINT);
+
+    echo "\n\n";
 }
-
-
-

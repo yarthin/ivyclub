@@ -85,19 +85,20 @@
                                     </div>                                    
                                     <div class="swiper-wrapper " id="fb-event-wrapper-m">
                                         <div id = 'slideM_0' class = 'swiper-slide' >
-                                            <div id= 'subslideM_6' class = 'subslide' ></div>
-                                            <div id= 'subslideM_5' class = 'subslide' ></div>
+                                            <div id= 'subslideM_0' class = 'subslide' ></div>
+                                            <div id= 'subslideM_1' class = 'subslide' ></div>
                                         </div>
                                         <div id = 'slideM_1' class = 'swiper-slide' >
-                                            <div id= 'subslideM_4' class = 'subslide' ></div>
+                                            <div id= 'subslideM_2' class = 'subslide' ></div>
                                             <div id= 'subslideM_3' class = 'subslide' ></div>
                                         </div>
                                         <div id = 'slideM_2' class = 'swiper-slide' >
-                                            <div id= 'subslideM_2' class = 'subslide' ></div>
-                                            <div id= 'subslideM_1' class = 'subslide' ></div>
+                                            <div id= 'subslideM_4' class = 'subslide' ></div>
+                                            <div id= 'subslideM_5' class = 'subslide' ></div>
                                         </div>
                                         <div id = 'slideM_3' class = 'swiper-slide' >
-                                            <div id= 'subslideM_0' class = 'subslide' ></div>
+                                            <div id= 'subslideM_6' class = 'subslide' ></div>
+                                            <div id= 'subslideM_7' class = 'subslide' ></div>
                                             
                                         </div>
                                     </div>
@@ -116,17 +117,17 @@
                                     <div class="swiper-wrapper " id="fb-event-wrapper">
                                         <div id = 'slide_0' class = 'swiper-slide' >
                                             
-                                            <div id= 'subslide_6' class = 'subslide' ></div>
-                                            <div id= 'subslide_5' class = 'subslide' ></div>
-                                            <div id= 'subslide_4' class = 'subslide' ></div>
+                                            <div id= 'subslide_0' class = 'subslide' ></div>
+                                            <div id= 'subslide_1' class = 'subslide' ></div>
+                                            <div id= 'subslide_2' class = 'subslide' ></div>
                                             <div id= 'subslide_3' class = 'subslide' ></div>
 
                                         </div>
                                         <div id = 'slide_1' class = 'swiper-slide' >
-                                            <div id= 'subslide_2' class = 'subslide' ></div>
-                                            <div id= 'subslide_1' class = 'subslide' ></div>
-                                            <div id= 'subslide_0' class = 'subslide' ></div>
-                                            <div id= 'subslide_' class = 'subslide' ></div>
+                                            <div id= 'subslide_4' class = 'subslide' ></div>
+                                            <div id= 'subslide_5' class = 'subslide' ></div>
+                                            <div id= 'subslide_6' class = 'subslide' ></div>
+                                            <div id= 'subslide_7' class = 'subslide' ></div>
                                         </div>
                                     </div>                                 
                                 <!-- swiper-container -->
