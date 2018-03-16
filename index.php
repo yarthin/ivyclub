@@ -25,6 +25,7 @@
     <meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
     <meta property="place:location:latitude" content="47.425747">
     <meta property="place:location:longitude" content="9.732654">   
+    <link rel="canonical" href="https://www.ivyclub.ch" />
 <?php
     include('./include/header.php')
 ?>
@@ -53,12 +54,12 @@
                 <div class="single-page-wrapper-2">
                     <div class="single-page-bg" data-animation-bg="inverse"></div>
                     <div class="content-wrapper" data-animation-content="inverse">
-                        <h1 class="name to-bottom delay-2" data-animation-up="to-bottom" data-animation-down="to-top">
+                        <h1 class="name to-top delay-3" data-animation-up="to-bottom" data-animation-down="to-top">
                             <b>WELCOME TO IVY</b></h1>
-                        <h3 class="title to-bottom delay-3" data-animation-up="to-bottom" data-animation-down="to-top">
+                        <h3 class="title to-top delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
                             <b class="bold-text">ENTERTAINMENT.NIGHTLIFE.IN.STYLE</b>
                         </h3>
-                        <div class="to-top delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
+                        <div class="to-bottom delay-3" data-animation-up="to-bottom" data-animation-down="to-top">
                             <a class="home-btn go-ss-2" href="">Upcoming Events</a>
                             <a class="home-btn go-ss-3" href="">Latest Pictures</a>
                             <a class="home-btn" href="club">Private Hire</a>
@@ -152,7 +153,7 @@
                                     <div class="fbp-container pg-1 clearfix"></div>
                                 </div>
                             </div>
-                        <div class="show-all"><a href="/photos">SEE ALL PICTURES</a></div>
+                        <div class="show-all to-top delay-4" data-animation-up="to-top" data-animation-down="to-bottom"><a href="/photos">SEE ALL PICTURES</a></div>
                     </div>
                 </div>
             </div>
@@ -203,11 +204,30 @@
 <?php
     include('./include/js_lib.php')
 ?>
-<script src="js/fbintro-api.js" defer></script>    
-<script src="js/faba.js" defer></script>
+<?php
+$js = array(
+       'fbintro-api.js',
+       'faba.js'
+);
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
+	echo "<script src='/js/$filename?$filemtime' defer>\n";
+	echo "</script>\n";
+}
+?>
 <script src="//cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-<script src="js/insta.js" defer></script>
-<script src="js/home.js" defer></script>
+<?php
+$js = array(
+       'insta.js',
+       'home.js'
+);
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
+	echo "<script src='/js/$filename?$filemtime' defer>\n";
+	echo "</script>\n";
+}
+?>
+
 <script type="application/ld+json">
 {
   "@context":"http://schema.org",

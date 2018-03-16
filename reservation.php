@@ -29,9 +29,14 @@
 	<meta property="place:location:latitude" content="47.425747">
 	<meta property="place:location:longitude" content="9.732654">
 	<link rel="canonical" href="https://www.ivyclub.ch/reservation" />
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="/images/favicon.png"> 
+	<?php
+	$filemtime = filemtime(dirname(__FILE__) . '/css/styles.min.css');
+	echo "<link type='text/css' href='css/styles.min.css?$filemtime' rel='stylesheet'/>\n";
+	$filemtime = filemtime(dirname(__FILE__) . '/js/jquery.min.js');
+	echo "<script src='js/jquery.min.js?$filemtime'>\n";
+	echo "</script>\n";		
+	?>
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -207,60 +212,88 @@
 	</div><!-- pagePile -->
 </body>
 </html>
-    <link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="css/jquery.pagepiling.min.css" rel="stylesheet">
-    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
-    <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="css/swiper.min.css" rel="stylesheet">
-	
-	<script type="text/javascript" src="js/selectjs/main-prod-one.min.js" async></script>
-	<script type="text/javascript" src="js/selectjs/main-prod-two.min.js" defer></script>
-	<script type="text/javascript" src="js/selectjs/select2/select2.min.js" defer></script>
-	<link rel="stylesheet" href="css/selectcss/main-prod.min.css" type="text/css" media="all" >
-	<link rel="stylesheet" href="js/selectjs/select2/select2.min.css" type="text/css" media="all" >
+<?php
+$css = array(
+    'jquery.pagepiling.min.css',
+    'material-design-iconic-font.min.css',
+    'pe-icon-7-stroke.css',
+    'swiper.min.css',
 
-	<script src="js/swiper.jquery.min.js"></script>
-	<script src="js/jquery.pagepiling.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-	<script src="js/pikaday.min.js"></script>
-	<script src="js/pikaday.jquery.min.js"></script>
-	<script src="js/datepicker.js"></script>
+);
 
-	<!-- script type="text/javascript" src="js/jquery.contactable.js"></script -->
-	<script src="js/jquery.jigowatt.js"></script>
+foreach($css as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../css/' . $filename);
+	echo "<link type='text/css' href='/css/$filename?$filemtime'  rel='stylesheet' />\n";
+}
 
-	<script type="text/javascript" src="js/plugins.min.js" defer></script>	
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
-	
+$js = array(
+ 	'main-prod-one.min.js',
+    'main-prod-two.min.js'
+ 
+);
 
-<script type="text/javascript">
-  var userFeed = new Instafeed({
-    get: 'user',
-    userId: '3536066548',
-    clientId: '4574aab6ff844ec3a7cfc05b65038d1c',
-    accessToken: '3536066548.4574aab.bfd0b5f928944e16bf59aa1499247d6',
-    resolution: 'standard_resolution',
-    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><span>{{likes}}{{comments}}</span></a>',
-    sortBy: 'most-recent',
-    limit: 32,
-    links: false
-  });
-  userFeed.run();
-$(document).ready(function(){
-	$("#subject").change(function() {	
-		if($(this).val() != "") {		
-            var event_txt = $("#subject option:selected").text();
-            $('#event_txt').val(event_txt);
-		} 
-	});
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../js/selectjs/' . $filename);
+	echo "<script src='/js/selectjs/$filename?$filemtime'>\n";
+	echo "</script>\n";
+}
 
-	$('#people_num').select2({
-        minimumResultsForSearch: 1
-    });
+$js = array(
+    'select2.min.js',
+
+);
+
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../js/selectjs/select2/' . $filename);
+	echo "<script src='/js/selectjs/select2/$filename?$filemtime'>\n";
+	echo "</script>\n";
+}
+
+$css = array(
+    'main-prod.min.css'
+
+);
+
+foreach($css as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../css/selectcss/' . $filename);
+	echo "<link type='text/css' href='/css/selectcss/$filename?$filemtime'  rel='stylesheet' />\n";
+}
+
+$css = array(
+    'select2.min.css'
+
+);
+
+foreach($css as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../js/selectjs/select2/' . $filename);
+	echo "<link type='text/css' href='/js/selectjs/select2/$filename?$filemtime'  rel='stylesheet' />\n";
+}
+
+$js = array(
+    
+    'swiper.jquery.min.js',
+    'jquery.pagepiling.min.js',
+
+    'scripts.min.js',
+    'moment.min.js',
+    'pikaday.min.js',
+    'pikaday.jquery.min.js',
+    'datepicker.js',
+    'jquery.jigowatt.min.js',
+    'plugins.min.js'  
+);
+
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/../js/' . $filename);
+	echo "<script src='/js/$filename?$filemtime'>\n";
+	echo "</script>\n";
+}
 
 
-   
-});
+?> 
 
-</script>
+
+
+
+
+

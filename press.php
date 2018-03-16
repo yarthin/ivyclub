@@ -29,97 +29,9 @@
 	<meta property="place:location:latitude" content="47.425747">
 	<meta property="place:location:longitude" content="9.732654">
 	<link rel="canonical" href="https://www.ivyclub.ch/press" />
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:346744,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-82822902-1', 'auto');
-</script>
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'de'}
-</script>
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '273952083142088');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=273952083142088&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-
-</head>
-<body>
-	<div class="css-loader">
-		<span>L</span>
-		<span>O</span>
-		<span>A</span>
-		<span>D</span>
-		<span>I</span>
-		<span>N</span>
-		<span>G</span>
-	</div>	
-	<header>
-		<nav>
-			
-			<div class="logo">
-				<a href="home"><img src="images/logo.png" alt="IVY Logo"></a>
-			</div>
-			
-			<div class="nav-icon" data-toggle="navigation" data-target="#main-menu">
-                <span>MENU</span>
-			</div>
-			
-			<div class="main-menu" id="main-menu" data-animation-in="to-right" data-animation-duration=".6">
-				<div class="menu-wrapper">
-					<ul class="nav-menu">
-						<li><a href="home">HOME</a></li>
-						<li><a href="about">ABOUT</a></li>
-						<li><a href="club">PRIVATE HIRE</a></li>
-						<li><a href="photos">PHOTOS</a></li>
-						<li><a href="videos">VIDEOS</a></li>
-						<li><a href="events">EVENTS</a></li>
-						<li><a href="reservation">LOUNGE / TABLE</a></li>
-						<li><a href="members">MEMBERS</a></li>
-						<li><a href="contact">CONTACT</a></li>
-						<li>
-							<ul class="icons">
-								<li><a href="https://www.facebook.com/ivyclubsg"><i class="zmdi zmdi-facebook"></i></a></li>
-								<li><a href="https://www.instagram.com/ivyclubsg/"><i class="zmdi zmdi-instagram"></i></a></li>
-								<li><a href="https://www.twitter.com/ivyclubsg"><i class="zmdi zmdi-twitter"></i></a></li>
-								<li><a href="https://plus.google.com/+IvyclubCh"><i class="zmdi zmdi-google"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UC3lcckYRJYjuJLHBtvZN0qQ"><i class="zmdi zmdi-youtube"></i></a></li>
-								<li><a href="mailto:welcome@ivyclub.ch"><i class="zmdi zmdi-email"></i></a></li>
-							</ul><!-- icons -->
-						</li>
-					</ul>
-				</div><!-- menu-wrapper -->
-			</div><!-- main-menu -->
-			
-		</nav>
-	</header>
+<?php
+    include('./include/header.php')
+?>
 	
 	<div class="page-nav-area">
 		<a class="prev" href="#" data-slider-nav="prev"><i class="pe-7s-play"></i></a>
@@ -277,87 +189,44 @@
 			</div><!-- single-page-wrapper -->
 		</div><!-- single-page -->
 	</div><!-- pagePile -->
+<link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<?php
+    include('./include/js_lib.php')
+?>
+<script src="//cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+<?php
+$js = array(
+       'insta.js',
+       'home.js'
+);
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
+	echo "<script src='/js/$filename?$filemtime' defer>\n";
+	echo "</script>\n";
+}
+?>
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "url":"http://www.ivyclub.ch/about"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "url":"http://www.ivyclub.ch/events"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "url":"http://www.ivyclub.ch/photos"
+    }
+  ]
+}
+</script>
 </body>
 </html>
-    <link href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="css/jquery.pagepiling.min.css" rel="stylesheet">
-    <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
-    <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="css/swiper.min.css" rel="stylesheet">
-	
-	<script type="text/javascript" src="js/selectjs/main-prod-one.min.js" async></script>
-	<script type="text/javascript" src="js/selectjs/main-prod-two.min.js" defer></script>
-	<script type="text/javascript" src="js/selectjs/select2/select2.min.js" defer></script>
-	<link rel="stylesheet" href="css/selectcss/main-prod.min.css" type="text/css" media="all" >
-	<link rel="stylesheet" href="js/selectjs/select2/select2.min.css" type="text/css" media="all" >
-
-	<script src="js/swiper.jquery.min.js"></script>
-	<script src="js/jquery.pagepiling.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-	<script src="js/pikaday.min.js"></script>
-	<script src="js/pikaday.jquery.min.js"></script>
-	<script src="js/datepicker-slide.js"></script>
-
-	<script type="text/javascript" src="js/jquery.contactable.js"></script>
-
-	<script type="text/javascript" src="js/plugins.min.js" defer></script>	
-	<script type="text/javascript" src="js/instafeed.min.js"></script>
-<script type="text/javascript">
-  var userFeed = new Instafeed({
-    get: 'user',
-    userId: '3536066548',
-    clientId: '4574aab6ff844ec3a7cfc05b65038d1c',
-    accessToken: '3536066548.4574aab.bfd0b5f928944e16bf59aa1499247d6',
-    resolution: 'standard_resolution',
-    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><span>{{likes}}{{comments}}</span></a>',
-    sortBy: 'most-recent',
-    limit: 32,
-    links: false
-  });
-  userFeed.run();
-</script>
-<?php include_once("include/events_api.php"); ?>
-<script type="text/javascript">
-jQuery(function(){
-	jQuery('#my-contact-div').contactable(
-    {
-        recievedMsg : 'Thank you for your message',
-        hideOnSubmit: true
-    });
-});
-
-$(document).ready(function() {
-	var options = '<option value="" selected>Bitte wählen</option>';
-	<?php foreach($result_json["event"] as $evt) { ?>
-		<?php 
-		$startdate = explode(" ", $evt["startdate"])[0];
-		$startdate_arr = explode("-", $startdate);
-		$value = $evt["name"]." - ".$startdate_arr[2]."-".$startdate_arr[1]."-".$startdate_arr[0]; 
-		?>
-		options += '<option value="<?php echo $evt["id"]; ?>"><?php echo $value; ?></option>';
-	<?php } ?>
-	$("select#subject").html(options);
-	
-	$('#subject').select2({
-		minimumResultsForSearch: 1
-	});
-});
-</script>
-<script type="application/ld+json"> { 
-"@context" : "http://schema.org",
-"@type" : "LocalBusiness", 
-"address" : {
-"@type": "PostalAddress",
-"addressLocality": "St.Gallen", 
-"addressRegion": "Ostschweiz", 
-"postalCode": "9000", 
-"streetAddress": "Bahnhofstrasse 10" }, 
-"name":"IVY - club & events",
-"url":"www.ivyclub.ch",
-"email":"welcome@ivyclub.ch",
-"openingHours": [ 
-"22.00-05.00"], 
-"paymentAccepted":"Visa, Master Card, Discover, Amex",
-"image" : "https://www.ivyclub.ch/images/logo.png"
-} </script>

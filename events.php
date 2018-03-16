@@ -26,12 +26,10 @@
     <meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
     <meta property="place:location:latitude" content="47.425747">
     <meta property="place:location:longitude" content="9.732654">
-    
-
+    <link rel="canonical" href="https://www.ivyclub.ch/events" />
 <?php
     include('./include/header.php')
 ?>
-
    
     <div class="footer-writing left fixed-writing">
         <h6 class="copyright"><img class="cpy-icon" src="images/Copyright-icon.png" alt="Copyright Icon">IVY - club & events</h6>
@@ -136,11 +134,7 @@
     <?php
         include('./include/js_lib.php')
     ?>    
-
-
-<script type="text/javascript">
-
-
+<script>
 $(document).ready(function() {
 	var options = '<option value="" selected>Event wählen</option>';
 	<?php foreach($result_json["event"] as $evt) { ?>

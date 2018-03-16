@@ -42,8 +42,5 @@ function printResult($ch, $result, $requestData)
         echo "response:\n";
         echo json_encode($result, JSON_PRETTY_PRINT);
     }
-    echo "\n\n now create events";
+    echo "\n\n";
 }
-
-
-

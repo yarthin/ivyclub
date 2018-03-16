@@ -110,8 +110,7 @@ $data = [
     "format" => "xml",
     'customer_id' => $id,
     'lounge_condition_id' => 1,
-    'event_id' => $event_id ,
-    "people_num" => $people_num 
+    'event_id' => $event_id 
 ];
 
 $ch = curl_init();

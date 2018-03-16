@@ -1,16 +1,6 @@
-<link rel="icon" type="image/png" href="/images/favicon.png">
-
-
-<?php
-$filemtime = filemtime(dirname(__FILE__) . '/../css/styles.min.css');
-echo "<link type='text/css' href='css/styles.css?$filemtime' rel='stylesheet'/>\n";
-	
-$filemtime = filemtime(dirname(__FILE__) . '/../js/jquery.min.js');
-echo "<script src='js/jquery.min.js?$filemtime'>\n";
-echo "</script>\n";	
-	
-	
-?>
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/jquery.min.js" ></script>
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -20,7 +10,6 @@ echo "</script>\n";
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-// defer
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82822902-1"></script>
 <script>
@@ -30,6 +19,9 @@ echo "</script>\n";
 
   gtag('config', 'UA-82822902-1');
 </script>
+
+</head>
+<body>
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -42,8 +34,7 @@ echo "</script>\n";
   fbq('init', '273952083142088');
   fbq('track', 'PageView');
 </script>
-</head>
-<body>
+<noscript><img alt="fb-pix" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=273952083142088&ev=PageView&noscript=1" /></noscript>	
     <div class="css-loader">
         <span>L</span>
         <span>O</span>
@@ -54,7 +45,7 @@ echo "</script>\n";
         <span>G</span>
     </div>
     
-    <?php include('./include/subReservation.php'); ?>
+    <?php include('./subReservation.php'); ?>
     
     <div id = 'header' >
         <nav>

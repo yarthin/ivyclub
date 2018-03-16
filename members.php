@@ -25,6 +25,7 @@
 	<meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
 	<meta property="place:location:latitude" content="47.425747">
 	<meta property="place:location:longitude" content="9.732654">
+	<link rel="canonical" href="https://www.ivyclub.ch/members" />
 <?php
     include('./include/header.php')
 ?>
@@ -65,7 +66,7 @@
 											Für alle, die am Wochenende ihre Füsse nicht stillhalten können und das volle IVY-Erlebnis geniessen möchten:</h6>
 									</div>
 									<div class="address">
-										<h6 class="desc">
+										<h6 class="listen">
 											<ul>
 											<li>- freier Einlass für jede Wochenend-Veranstaltung inkl. 1 Begleitperson (ausgen. sind Auftritte von besonderen Künstlern)</li>
 											<li>- bevorzugte Behandlung sowie vergünstige Eintrittspreise bei speziellen Act-Auftritten</li>
@@ -82,7 +83,7 @@
 						<div id = 'member_box' class="right-area half-area hidden-xs" data-animation-bg="inverse">
 							<div class="writing-wrapper to-top delay-3" data-animation-down="to-top" data-animation-up="to-bottom" >
 							
-								<script src="js/passcreator.load.js?landingpage=https://app.passcreator.com/l/membergold?showMenu=false"></script>					
+								<script src="//portal.passcreator.de/loader/lib/passcreator.load.js?landingpage=https://portal.passcreator.de/l/membergold?showMenu=false"></script>					
 						
 							</div>
 						</div>                        <!-- /div -->
@@ -99,7 +100,7 @@
         include('./include/js_lib.php')
     ?>   
 
-<script type="text/javascript">
+<script>
 
 $(document).ready(function() {
 	var options = '<option value="" selected>Bitte wählen</option>';

@@ -26,6 +26,7 @@
     <meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
     <meta property="place:location:latitude" content="47.425747">
     <meta property="place:location:longitude" content="9.732654">
+    <link rel="canonical" href="https://www.ivyclub.ch/photos" />
 
 <?php
     include('./include/header.php')
@@ -96,43 +97,35 @@
     ?>
     <script src="js/fbphoto-api.js" defer></script>
     <script src="js/faba.js" defer></script>
-
-    
-    
-
-    
-
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-	var options = '<option value="" selected>Bitte wählen</option>';
-	<?php foreach($result_json["event"] as $evt) { ?>
-		<?php
-		$startdate = explode(" ", $evt["startdate"])[0];
-		$startdate_arr = explode("-", $startdate);
-		$value = $evt["name"]." - ".$startdate_arr[2]."-".$startdate_arr[1]."-".$startdate_arr[0];
-		?>
-		options += '<option value="<?php echo $value; ?>"><?php echo $value; ?></option>';
-	<?php } ?>
-	$("select#subject").html(options);
-	
-});
-</script>
-<script type="application/ld+json"> { 
-"@context" : "http://schema.org",
-"@type" : "LocalBusiness", 
-"address" : {
-"@type": "PostalAddress",
-"addressLocality": "St.Gallen", 
-"addressRegion": "Ostschweiz", 
-"postalCode": "9000", 
-"streetAddress": "Bahnhofstrasse 10" }, 
-"name":"IVY - club & events",
-"url":"www.ivyclub.ch",
-"email":"welcome@ivyclub.ch",
-"openingHours": [ 
-"22.00-05.00"], 
-"paymentAccepted":"Visa, Master Card, Discover, Amex",
-"image" : "https://www.ivyclub.ch/images/logo.png"
-} </script>
+	<script>
+	$(document).ready(function() {
+		var options = '<option value="" selected>Bitte wählen</option>';
+		<?php foreach($result_json["event"] as $evt) { ?>
+			<?php
+			$startdate = explode(" ", $evt["startdate"])[0];
+			$startdate_arr = explode("-", $startdate);
+			$value = $evt["name"]." - ".$startdate_arr[2]."-".$startdate_arr[1]."-".$startdate_arr[0];
+			?>
+			options += '<option value="<?php echo $value; ?>"><?php echo $value; ?></option>';
+		<?php } ?>
+		$("select#subject").html(options);
+		
+	});
+	</script>
+	<script type="application/ld+json"> { 
+	"@context" : "http://schema.org",
+	"@type" : "LocalBusiness", 
+	"address" : {
+	"@type": "PostalAddress",
+	"addressLocality": "St.Gallen", 
+	"addressRegion": "Ostschweiz", 
+	"postalCode": "9000", 
+	"streetAddress": "Bahnhofstrasse 10" }, 
+	"name":"IVY - club & events",
+	"url":"www.ivyclub.ch",
+	"email":"welcome@ivyclub.ch",
+	"openingHours": [ 
+	"22.00-05.00"], 
+	"paymentAccepted":"Visa, Master Card, Discover, Amex",
+	"image" : "https://www.ivyclub.ch/images/logo.png"
+	} </script>

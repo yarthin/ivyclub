@@ -31,7 +31,7 @@
 }
  h2.title-event{
      color: #fff;
-     font-size: 1.8em;
+     font-size: 1.4em;
 }
  p{
      line-height: 1.6;
@@ -427,8 +427,8 @@ ul.icons{
      color: #FFF;
      text-transform: uppercase;
      background-color: #222423;
-     border: #333 1px Solid;
-     opacity: 0.85;
+     border: #d6b161 1px Solid;
+     opacity: 0.75;
 }
  .home-btn:hover{
      color: #fff;
@@ -647,22 +647,33 @@ ul.icons{
 }
  #section-1 .single-page-bg{
      background-image: url(../images/bg/club-intro.jpg);
+ 
 }
  #section-2 .single-page-bg{
      background-image: url(../images/bg/club-party.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  #section-3 .single-page-bg{
      background-image: url(../images/slider-3-1600x1000.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
 
  #section-5 .single-page-bg{
      background-image: url(../images/bg/bar-chill.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  #section-6 .single-page-bg{
      background-image: url(../images/slider-6-1600x1000.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  #section-7 .single-page-bg{
      background-image: url(../images/slider-7-1600x1000.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  .single-page-bg:after{
      background-color: rgba(0, 0, 0, .2);
@@ -702,6 +713,8 @@ ul.icons{
 }
 #section-4 .single-page-bg, #section-10-ab .single-page-bg{
      background-image: url(../images/bg/door.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  #section-12-ab .single-page-bg{
      filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
@@ -709,6 +722,8 @@ ul.icons{
 }
  #section-4-ab .single-page-bg, #section-12-ab .single-page-bg{
      background-image: url(../images/bg/lounge.jpg);
+     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
 }
  #section-12 .single-page-bg{
      background-image: url(../images/bg/bar-club.jpg);
@@ -797,8 +812,8 @@ ul.icons{
      color: white;
 }
  #section-photo #fbp-navs > a {
-     padding: 3px 20px;
-     border: 1px solid #333;
+     padding: 5px 20px;
+     border: 1px solid #d6b161;
      font-size: 1.4em;
      text-transform: uppercase;
      line-height: 45px;
@@ -809,7 +824,7 @@ ul.icons{
 }
  #pagination .active {
      background-color: #222423;
-     border: 1px solid #333;
+     border: 1px solid #d6b161;
      opacity: 1.0;
 }
  #pagination .active a {
@@ -1037,6 +1052,15 @@ ul.icons{
   .photo-page-bg .desc{
    /*  color: #fff; */
      font-size: 1.0em 
+}
+.photo-page-bg.members .desc {
+	font-size: 1.2em;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.photo-page-bg.members .listen {
+    font-size: 1.0em;
+    font-weight: 500;
 }
  .single-page .desc{
      color: #fff;
@@ -1296,7 +1320,7 @@ ul.icons{
 }
 /* SWIPER CONTROL BUTTON */
  .team-area .swiper-control-wrapper, .postcontent .swiper-control-wrapper{
-     border-color: #333;
+     border-color: #d6b161;
 }
  .team-area .swiper-control, .postcontent .swiper-control{
      background-color: #222423;
@@ -1453,7 +1477,7 @@ ul.icons{
      float: right;
 }
  .members .half-area.left-area .writing-wrapper {
-     padding: 5% 0 0 5%;
+     padding: 3% 0 3% 3%;
 }
  .members .half-area.right-area .writing-wrapper {
      padding: 5% 1% 0 1%;
@@ -1589,8 +1613,8 @@ ul.icons{
      border: 0;
      border-radius: 0;
      box-shadow: none;
-     height: 65px;
-     line-height: 65px;
+     height: 60px;
+     line-height: 60px;
      border-bottom-width: 2px;
      border-bottom-style: solid;
      font-size: 1.1em;
@@ -1688,8 +1712,15 @@ ul.icons{
      border: 2px solid #777;
 }
  .contact-area .contact-form .select2-container .select2-selection--single .select2-selection__rendered {
-     padding-left: 22px;
-     line-height: 65px;
+     padding-left: 20px;
+     line-height: 60px;
+     color: #777;
+     font-size: 1.1em;
+     border-bottom: 2px solid;
+}
+#people_num option {
+     padding-left: 20px;
+     line-height: 60px;
      color: #777;
      font-size: 1.1em;
      border-bottom: 2px solid;
@@ -1748,7 +1779,7 @@ ul.icons{
      border-color: transparent transparent #777 transparent;
 }
  .contact-area .contact-form .select2-container--default .select2-selection--single .select2-selection__arrow {
-     height: 65px;
+     height: 60px;
 }
  .contact-area .contact-form .select2-container--default .select2-results__option[aria-selected="true"] {
      background-color: #5d5959;

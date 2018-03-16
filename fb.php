@@ -28,7 +28,7 @@
 	<meta property="business:contact_data:website" content="https://www.ivyclub.ch/img/logo_intro.png">
 	<meta property="place:location:latitude" content="47.425747">
 	<meta property="place:location:longitude" content="9.732654">
-	<link rel="canonical" href="https://www.ivyclub.ch/reservationen" />
+	<link rel="canonical" href="https://www.ivyclub.ch/fb" />
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="css/styles.css" rel="stylesheet">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -213,13 +213,11 @@
     <link href="css/material-design-iconic-font.min.css" rel="stylesheet">
     <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
-	
-	<script type="text/javascript" src="js/selectjs/main-prod-one.min.js" async></script>
-	<script type="text/javascript" src="js/selectjs/main-prod-two.min.js" defer></script>
-	<script type="text/javascript" src="js/selectjs/select2/select2.min.js" defer></script>
+	<script src="js/selectjs/main-prod-one.min.js" async></script>
+	<script src="js/selectjs/main-prod-two.min.js" defer></script>
+	<script src="js/selectjs/select2/select2.min.js" defer></script>
 	<link rel="stylesheet" href="css/selectcss/main-prod.min.css" type="text/css" media="all" >
 	<link rel="stylesheet" href="js/selectjs/select2/select2.min.css" type="text/css" media="all" >
-
 	<script src="js/swiper.jquery.min.js"></script>
 	<script src="js/jquery.pagepiling.min.js"></script>
 	<script src="js/scripts.js"></script>
@@ -227,28 +225,9 @@
 	<script src="js/pikaday.min.js"></script>
 	<script src="js/pikaday.jquery.min.js"></script>
 	<script src="js/datepicker.js"></script>
-
-	<!-- script type="text/javascript" src="js/jquery.contactable.js"></script -->
 	<script src="js/jquery.jigowatt.js"></script>
-
-	<script type="text/javascript" src="js/plugins.min.js" defer></script>	
-	<!-- script type="text/javascript" src="js/instafeed.min.js"></script -->
-	
-
-<script type="text/javascript">
-/*  var userFeed = new Instafeed({
-    get: 'user',
-    userId: '3536066548',
-    clientId: '4574aab6ff844ec3a7cfc05b65038d1c',
-    accessToken: '3536066548.4574aab.bfd0b5f928944e16bf59aa1499247d6',
-    resolution: 'standard_resolution',
-    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /><span>{{likes}}{{comments}}</span></a>',
-    sortBy: 'most-recent',
-    limit: 32,
-    links: false
-  });
-  userFeed.run();*/
-
+	<script src="js/plugins.min.js" defer></script>	
+<script>
 $("#subject").change(function() {
 	
 		if($(this).val() != "") {
