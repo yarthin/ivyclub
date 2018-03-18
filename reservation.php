@@ -32,7 +32,7 @@
     <link rel="icon" type="image/png" href="/images/favicon.png"> 
 	<?php
 	$filemtime = filemtime(dirname(__FILE__) . '/css/styles.css');
-	echo "<link type='text/css' href='css/styles.css?$filemtime' rel='stylesheet'/>\n";
+	echo "<link type='text/css' href='css/styles.min.css?$filemtime' rel='stylesheet'/>\n";
 	$filemtime = filemtime(dirname(__FILE__) . '/js/jquery.min.js');
 	echo "<script src='js/jquery.min.js?$filemtime'>\n";
 	echo "</script>\n";		
@@ -303,3 +303,26 @@ foreach($js as $filename) {
 
 
 
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "url":"http://www.ivyclub.ch/about"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "url":"http://www.ivyclub.ch/events"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "url":"http://www.ivyclub.ch/photos"
+    }
+  ]
+}
+</script>

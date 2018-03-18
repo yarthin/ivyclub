@@ -54,12 +54,12 @@
                 <div class="single-page-wrapper-2">
                     <div class="single-page-bg" data-animation-bg="inverse"></div>
                     <div class="content-wrapper" data-animation-content="inverse">
-                        <h1 class="name to-top delay-3" data-animation-up="to-bottom" data-animation-down="to-top">
+                        <h1 class="name to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
                             <b>WELCOME TO IVY</b></h1>
                         <h3 class="title to-top delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
                             <b class="bold-text">ENTERTAINMENT.NIGHTLIFE.IN.STYLE</b>
                         </h3>
-                        <div class="to-bottom delay-3" data-animation-up="to-bottom" data-animation-down="to-top">
+                        <div class="to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
                             <a class="home-btn go-ss-2" href="">Upcoming Events</a>
                             <a class="home-btn go-ss-3" href="">Latest Pictures</a>
                             <a class="home-btn" href="club">Private Hire</a>
@@ -142,17 +142,17 @@
             <div class="single-page-wrapper" data-slide-page-for-menu="to-right">
                 <div class="single-page-wrapper-2">
                     <div class="single-page-bg" data-animation-bg="inverse"></div>
-                    <div class="content-wrapper introphotos" data-animation-content="inverse">
-                        <h2 class="heading"><b>Photos</b></h2>  
-                        <div id="faba" class="to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
-                            <div id="fb-breadcrumbs">
-                                <h5 id="fbgh">Übersicht</h5>
+                        <div class="content-wrapper introphotos" data-animation-content="inverse">
+                            <h2 class="heading"><b>Photos</b></h2>  
+                            <div id="faba" class="to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
+                                <div id="fb-breadcrumbs">
+                                    <h5 id="fbgh">Übersicht</h5>
+                                </div>
+                                <div id="faba-inner" class = 'faba-intro' ></div>
+                                <div id="fb-photos">
+                                    <div class="fbp-container pg-1 clearfix"></div>
+                                </div>
                             </div>
-                            <div id="faba-inner" class = 'faba-intro' ></div>
-                            <div id="fb-photos">
-                                <div class="fbp-container pg-1 clearfix"></div>
-                            </div>
-                        </div>
                         <div class="show-all to-top delay-4" data-animation-up="to-top" data-animation-down="to-bottom"><a href="/photos">SEE ALL PICTURES</a></div>
                     </div>
                 </div>

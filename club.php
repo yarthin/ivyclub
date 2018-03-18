@@ -81,10 +81,11 @@
 										Unsere Lokalität bietet Ihnen eine einzigartige Atmosphäre für Ihren Anlass mit viel Freiheit für Ihre modernen, inspirierenden und kreativen Ideen. Teilen Sie uns Ihre Vorstellungen mit und wir schaffen die perfekte Umgebung dafür. Gerne übernehmen wir auch die Organisation Ihres Anlasses. Vom Catering zum Entertainment-Programm bis hin zur Dekoration; für uns ist keine Herausforderung zu gross!<br/>
 									</p>
 								</div>
-								
 								<div class="col-sm-12">
-									<a class="home-btn" target="_blank" href="docs/corporate.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
-									<a class="home-btn" target="_blank" href="docs/grundriss.jpg"><i class="fa fa-file-text-o" aria-hidden="true"></i> Grundrissplan</a>
+									<a class="home-btn openframe" target="_blank" href="docs/corporate.pdf" data-fancybox-type="iframe"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
+
+									<a rel="gallery" class="home-btn fancybox" href="docs/grundriss.jpg"><i class="fa fa-file-text-o" aria-hidden="true"></i> Grundrissplan</a>
+									
 								</div>
 							</div>
 						</div>
@@ -93,6 +94,10 @@
 			</div><!-- single-page-wrapper -->
 		</div><!-- intro -->
 	</div><!-- pagePile -->
+	
+	
+
+
 <link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <?php
     include('./include/js_lib.php')
@@ -109,6 +114,9 @@ foreach($js as $filename) {
 	echo "</script>\n";
 }
 ?>
+	<script>
+
+		</script>
 <script type="application/ld+json">
 {
   "@context":"http://schema.org",

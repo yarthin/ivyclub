@@ -124,8 +124,8 @@
 													<h2 class="title">Informationen</h2>
 													<p class="desc">									
 													<div class="col-sm-12">
-															<a class="home-btn" target="_blank" href="docs/corporate.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
-															<a class="home-btn" target="_blank" href="docs/grundriss.jpg"><i class="fa fa-file-text-o" aria-hidden="true"></i> Grundrissplan</a>
+															<a class="home-btn openframe" target="_blank" href="docs/corporate.pdf" data-fancybox-type="iframe"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
+															<a class="home-btn fancybox" target="_blank" href="docs/grundriss.jpg" data-fancybox-type="iframe"><i class="fa fa-file-text-o" aria-hidden="true"></i> Grundrissplan</a>
 														</div><!-- col-sm-12-->
 													</p>
 
@@ -225,13 +225,29 @@
 										</select>
 										<input type = 'hidden' id= 'event_txt' name = 'event_txt' >
 										<input type="text" aria-required="true" id="redate" name="Anderes Datum" class="form-control" placeholder="Anderes Datum" aria-invalid="true" required="" aria-label="Benutze die Maske um ein Datum zu wählen">
-										<input type="text" aria-required="true" id="people_num" name="people_num" class="form-control" placeholder="Anzahl Person" aria-invalid="true" required  maxlength="15" pattern="\d*" > 
+										<!-- input type="text" aria-required="true" id="people_num" name="people_num" class="form-control" placeholder="Anzahl Person" aria-invalid="true" required  maxlength="15" pattern="\d*" --> 
+										<select name="people_num" id="people_num" class="form-control" label="Vorname" aria-invalid="true" required >
+							                <option value="" selected>Anzahl Person</option> 
+							                <option value="5" >Anzahl Person : 5</option> 
+							                <option value="10" >Anzahl Person : 10</option> 
+							                <option value="15" >Anzahl Person : 15</option> 
+							                <option value="20" >Anzahl Person : 20</option> 
+							                <option value="25" >Anzahl Person : 25</option> 
+							                <option value="30" >Anzahl Person : 30</option> 
+							                <option value="35" >Anzahl Person : 35</option> 
+							                <option value="40" >Anzahl Person : 40</option> 
+							                <option value="45" >Anzahl Person : 45</option> 
+							                <option value="50" >Anzahl Person : 50</option> 
+							                
+							            </select>
 							
 										<button class="submit-btn" type="submit" id="submit">Jetzt Reservieren <i class="zmdi zmdi-long-arrow-right"></i></button>
 							
 										</form>
-									</div>
+						
+
 								</div>
+							</div>
 							</div>
 						</div><!-- right-area -->
 						
@@ -256,6 +272,14 @@ foreach($js as $filename) {
 	echo "</script>\n";
 }
 ?>
+<script type="text/javascript">	
+	$(document).ready(function(){	
+			 
+		$('#people_num').select2({	
+			minimumResultsForSearch: 1	
+		});
+	});
+</script>
 <script type="application/ld+json">
 {
   "@context":"http://schema.org",

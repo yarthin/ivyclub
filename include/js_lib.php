@@ -4,6 +4,7 @@ $css = array(
     'material-design-iconic-font.min.css',
     'pe-icon-7-stroke.css',
     'swiper.min.css',
+    'jquery.fancybox.css'
 
 );
 
@@ -59,7 +60,8 @@ $js = array(
     
     'swiper.jquery.min.js',
     'jquery.pagepiling.min.js',
-
+    'jquery.mousewheel.pack.js',
+    'jquery.fancybox.pack.js',
     'scripts.min.js',
     'moment.min.js',
     'pikaday.min.js',

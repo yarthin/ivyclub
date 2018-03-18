@@ -92,7 +92,7 @@
 										
 										<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
 							
-										<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" style="width: 100%;" placeholder="Mitteilung"></textarea>
+										<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" style="width: 100%; height: 120px" placeholder="Mitteilung"></textarea>
 							
 							
 										<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
