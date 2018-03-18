@@ -49,7 +49,8 @@
 
 
     <section class="body-content photo-page-bg" id="section-photo">
-        <div class="single-page-wrapper-2">
+        <div class="single-page-wrapper-2">            
+            <div class="single-page-bg photos-filter" data-animation-bg="inverse"></div>
             <div class="page-content">
                 <div class="container">
                     <div class="row">

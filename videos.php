@@ -43,6 +43,7 @@
         <!-- right-writing -->
         <section class="body-content photo-page-bg" id="section-videos">
             <div class="single-page-wrapper-2 video">
+                <div class="single-page-bg videos-filter" data-animation-bg="inverse"></div>
                 <div class="page-content videopage">
                     <div class="container">
                         <div class="row desktop-row">

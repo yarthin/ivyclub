@@ -10,8 +10,9 @@
      overflow-x: hidden;
      color: #000;
      font-size: 15px;
-     font-family: 'Abel', sans-serif;
-     word-wrap: break-word;
+    /* font-family: 'Abel', sans-serif;*/
+     font-family: sans-serif;
+    /* word-wrap: break-word;*/
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
 }
@@ -20,7 +21,8 @@
      padding: 0;
 }
  h1,h2,h3,h4,h5,h6,a{
-     font-family: 'Abel', sans-serif;
+    /* font-family: 'Abel', sans-serif;*/
+     font-family: sans-serif;
      font-weight: 300;
      color: #fff;
 }
@@ -391,11 +393,11 @@ ul.icons{
      position: absolute;
      height: 1px;
      width: 100%;
-     left: 0;
+     left: -2px;
      transition: all .4s ease-in-out;
 }
  .nav-icon span:nth-child(1){
-     top: 0;
+     top: 2px;
      width: 100%;
 }
  .nav-icon span:nth-child(2){
@@ -776,8 +778,20 @@ ul.icons{
      height: auto;
      overflow-y: scroll;
 }
+
+.photos-filter{
+    background-image: url('../images/bg/187-strassenband-showcase.jpg');
+    filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+    -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg); 
+}
+.videos-filter{
+    background-image: url(../images/bg/club-pro7.jpg);
+    filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
+    -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg); 
+}
  #section-photo h2.heading b {
      font-size: 38px;
+}
 }
  #section-photo h5.desc {
      font-size: 16px;
