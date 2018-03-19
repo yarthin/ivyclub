@@ -227,28 +227,18 @@ foreach($js as $filename) {
 	echo "</script>\n";
 }
 ?>
-
+<?php
+    include('./include/structure.php')
+?>
 <script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "@type":"ItemList",
-  "itemListElement":[
-    {
-      "@type":"ListItem",
-      "position":1,
-      "url":"http://www.ivyclub.ch/about"
-    },
-    {
-      "@type":"ListItem",
-      "position":2,
-      "url":"http://www.ivyclub.ch/events"
-    },
-    {
-      "@type":"ListItem",
-      "position":3,
-      "url":"http://www.ivyclub.ch/photos"
+{ "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Events",
+  "aggregateRating":
+    {"@type": "AggregateRating",
+     "ratingValue": "5",
+     "reviewCount": "5"
     }
-  ]
 }
 </script>
 </body>

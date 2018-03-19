@@ -86,23 +86,6 @@ $filemtime = filemtime(dirname(__FILE__) . '/js/jquery.yottie.bundled.js');
 echo "<script src='js/jquery.yottie.bundled.js?$filemtime'>\n";
 echo "</script>\n";	
 ?>
-
-
-    <script type="application/ld+json"> { 
-    "@context" : "http://schema.org",
-    "@type" : "LocalBusiness", 
-    "address" : {
-    "@type": "PostalAddress",
-    "addressLocality": "St.Gallen", 
-    "addressRegion": "Ostschweiz", 
-    "postalCode": "9000", 
-    "streetAddress": "Bahnhofstrasse 10" }, 
-    "name":"IVY - club & events",
-    "url":"www.ivyclub.ch",
-    "email":"welcome@ivyclub.ch",
-    "openingHours": [ 
-    "22.00-05.00"], 
-    "paymentAccepted":"Visa, Master Card, Discover, Amex",
-    "image" : "https://www.ivyclub.ch/images/logo.png"
-    } 
-</script>
+<?php
+    include('./include/structure.php')
+?>

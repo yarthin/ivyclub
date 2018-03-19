@@ -92,14 +92,10 @@
             </div>
         </div>
     </section>
-
-</body>
-</html>
     
-	<?php
-        include('./include/js_lib.php')
-    ?>   
-
+<?php
+    include('./include/js_lib.php')
+?>   
 <script>
 
 $(document).ready(function() {
@@ -119,3 +115,8 @@ $(document).ready(function() {
 	});
 });
 </script>
+<?php
+    include('./include/structure.php')
+?>
+</body>
+</html>

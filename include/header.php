@@ -64,7 +64,7 @@ echo "</script>\n";
             <div class="nav-icon" data-toggle="navigation" data-target="#main-menu">
                 <span>MENU</span>
             </div>
-            <div class="main-menu" id="main-menu" data-animation-in="to-right" data-animation-duration=".6">
+            <div class="main-menu" id="main-menu" data-animation-in="to-right" data-animation-duration=".4">
                 <div class="menu-wrapper">
                     <ul class="nav-menu">
                         <li><a href="home">HOME</a></li>

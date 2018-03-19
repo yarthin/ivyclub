@@ -427,13 +427,13 @@ ul.icons{
      color: #FFF;
      text-transform: uppercase;
      background-color: #222423;
-     border: #d6b161 1px Solid;
+     border: 1px Solid #d6b161 ;
      opacity: 0.75;
 }
  .home-btn:hover{
      color: #fff;
      background-color: #222423;
-     border: #333 1px Solid;
+     border: 1px Solid #d6b161 ;
      opacity: 1.0;
 }
  .page-nav-area{

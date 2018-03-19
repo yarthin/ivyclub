@@ -280,28 +280,8 @@ foreach($js as $filename) {
 		});
 	});
 </script>
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "@type":"ItemList",
-  "itemListElement":[
-    {
-      "@type":"ListItem",
-      "position":1,
-      "url":"http://www.ivyclub.ch/about"
-    },
-    {
-      "@type":"ListItem",
-      "position":2,
-      "url":"http://www.ivyclub.ch/events"
-    },
-    {
-      "@type":"ListItem",
-      "position":3,
-      "url":"http://www.ivyclub.ch/photos"
-    }
-  ]
-}
-</script>
+<?php
+    include('./include/structure.php')
+?>
 </body>
 </html>
