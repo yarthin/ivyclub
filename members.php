@@ -43,9 +43,11 @@
 								<li><a href="mailto:welcome@ivyclub.ch"><i class="zmdi zmdi-email"></i></a></li>	
 		</ul><!-- icons -->
 	</div><!-- right-writing -->
-	
+
+	<div class="single-page-bg photos-filter" data-animation-bg="inverse"></div>
 	<section class="body-content photo-page-bg members" id="section-photo">
         <div class="single-page-wrapper-2">
+        	
             <div class="page-content memberBox">
                 <div class="container" style = 'height : 100% ; ' >
                     <div class="row" style = 'height : 100% ; -webkit-overflow-scrolling: touch;  	overflow-y: scroll; '>

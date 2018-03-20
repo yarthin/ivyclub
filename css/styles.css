@@ -749,7 +749,7 @@ ul.icons{
      position: relative;
 }
  .photo-page-bg#section-videos {
-     background-image: url(../images/bg/club-pro7.jpg);
+    /* background-image: url(../images/bg/club-pro7.jpg);*/
      position: absolute;
      top: 0;
      left: 0;
@@ -763,7 +763,7 @@ ul.icons{
      overflow-y: scroll;
 }
  .photo-page-bg {
-     background-image: url('../images/bg/187-strassenband-showcase.jpg');
+    /* background-image: url('../images/bg/187-strassenband-showcase.jpg');*/
      position: absolute;
      top: 0;
      left: 0;
@@ -781,6 +781,7 @@ ul.icons{
     background-image: url('../images/bg/187-strassenband-showcase.jpg');
     filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg);
     -webkit-filter: grayscale(29%) sepia(0.69) saturate(0.63) brightness(66%) hue-rotate(358deg); 
+    height: auto ! important;
 }
 .videos-filter{
     background-image: url('../images/bg/club-pro7.jpg');

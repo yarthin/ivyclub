@@ -75,7 +75,8 @@ $clubzone_apikey = "d6a1d42cf04ac66a29283176d84b4028";
 $clubzone_host = "http://api.clubzone.ch";
 $createCustomer = $clubzone_host . "/customer/create";
 $createLoungereservation = $clubzone_host . "/lounge/addreservation";
-
+http://api.clubzone.ch/customer/create
+http://api.clubzone.ch/lounge/addreservation
 $data = [
     "apikey" => $clubzone_apikey,
     "format" => "xml",
