@@ -2186,6 +2186,7 @@
         function albumsInit() {
             paused = true;
             zbir['photos'] = 0;
+            var temp_arr = [] ;
             if (typeof callback.albumsLoading === 'function') callback.albumsLoading(1, false);
             if (loadFromCache) {
                 fetchCachedData('meta');
@@ -2237,12 +2238,32 @@
                                             }
                                             if (value.count > 0) {
                                                 hd.total = hd.total + 1;
-                                                if (picture.error.code == 1) {
-                                                    addAlbum(picture.url, value.name, value.id, value.description, value.count, value.cover_photo);
-                                                } else {
-                                                    addAlbum(picture.data.url, value.name, value.id, value.description, value.count, value.cover_photo);
+
+                                                var temp_data = {
+                                                    id          : value.id,
+                                                    name        : value.name,
+                                                //    description : value.description,
+                                                    count       : value.count,
+                                                    cover_photo : value.cover_photo ,
+                                                //    created_time: value.created_time
                                                 }
-                                                //addAlbum( picture.data.url, value.name, value.id, value.description, value.count, value.cover_photo );
+                                                temp_arr.push(temp_data) ;
+                                                
+                                                if(albums.data.length == (i+1)){
+                                                    //console.log(temp_arr);    
+                                                    temp_arr.sort(function(x, y) {
+                                                        if (x.cover_photo && y.cover_photo) {
+                                                             var date1 = new Date(x.cover_photo.created_time); 
+                                                             var  date2 = new Date(y.cover_photo.created_time);                                                            
+                                                              return date1 - date2 ;
+                                                        }
+                                                    });
+                                                    console.log(temp_arr);
+                                                    for(var temp_index = 0 ; temp_index < temp_arr.length ; temp_index ++){
+                                                        addAlbum(picture, temp_arr[temp_index].name, temp_arr[temp_index].id, '', temp_arr[temp_index].count, temp_arr[temp_index].cover_photo);
+                                                    }
+                                                }
+
                                                 // push pictures count to the zbir array for later use
                                                 // and pair it with each album ID
                                                 var ID = value.id;

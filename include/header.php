@@ -1,5 +1,5 @@
 <link rel="icon" type="image/png" href="/images/favicon.png">
-
+<link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 
 <?php
 $filemtime = filemtime(dirname(__FILE__) . '/../css/styles.css');

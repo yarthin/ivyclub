@@ -200,7 +200,7 @@
                     </div>
                 </div>
             </div>
-<link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
 <?php
     include('./include/js_lib.php')
 ?>

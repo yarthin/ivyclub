@@ -10,8 +10,9 @@
      overflow-x: hidden;
      color: #000;
      font-size: 15px;
-	 font-family: 'Abel', sans-serif;
-    /* word-wrap: break-word;*/
+     font-family: 'Abel', sans-serif;
+    /* font-family: 'Abel', sans-serif;
+     word-wrap: break-word;*/
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
 }
