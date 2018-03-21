@@ -2258,7 +2258,6 @@
                                                               return date1 - date2 ;
                                                         }
                                                     });
-                                                    console.log(temp_arr);
                                                     for(var temp_index = 0 ; temp_index < temp_arr.length ; temp_index ++){
                                                         addAlbum(picture, temp_arr[temp_index].name, temp_arr[temp_index].id, '', temp_arr[temp_index].count, temp_arr[temp_index].cover_photo);
                                                     }
