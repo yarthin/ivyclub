@@ -143,7 +143,7 @@
                 <div class="single-page-wrapper-2">
                     <div class="single-page-bg" data-animation-bg="inverse"></div>
                         <div class="content-wrapper introphotos" data-animation-content="inverse">
-                            <h2 class="heading"><b>Photos</b></h2>  
+                            <h2 class="heading home-photos"><b>Photos</b></h2>  
                             <div id="faba" class="to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
                                 <div id="fb-breadcrumbs">
                                     <h5 id="fbgh">Übersicht</h5>

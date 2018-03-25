@@ -1465,7 +1465,7 @@ ul.icons{
  .team-area .swiper-control-wrapper{
      position: absolute;
      bottom: 0;
-     top: 280px;
+     top: 275px;
      height: 45px;
      width: 120px;
      border-width: 1px;
@@ -3240,6 +3240,10 @@ ul.icons{
          padding: 0 15px;
           
     }
+    .aboutPage, .clubPage{
+        padding: 0 30px;
+    }
+    
     .content-wrapper.event-content{
          transition: all .7s ease-in-out;
          text-align: center;
@@ -3364,7 +3368,7 @@ ul.icons{
          line-height: 40px;
     }
      .contact-area .form-control.comments {
-         height: 80px;
+         height: 60px !important;
          width: 100%;
     }
      .contact-area .half-area.left-area .writing-wrapper {
@@ -3496,8 +3500,11 @@ ul.icons{
     }
     .single-page .heading {
         margin-top: 85px;
-        margin-left: 20px;
+    /*    margin-left: 20px;*/
        /* font-size: 36px;*/
+    }
+    .home-photos{
+        margin-left: 20px !important;
     }
     .reservHeading{
         font-size: 36px;     
@@ -3514,11 +3521,11 @@ ul.icons{
     }
     .contact-heading{
         margin-left: 0px ! important;
-        /*margin-top: 40px ! important;*/
+        margin-top: 35px ! important;
         font-size: 36px;
     }
     #contact_box{
-        padding: 0 10% 0 12%;
+        padding: 0 10% 0 10%;
     }
 
     .faba-intro .fb-album .fb-wrap {
@@ -4004,7 +4011,7 @@ ul.icons{
     }
     .x{
         width: 99%;
-        height: 13vw;
+        height: 12vw;
         margin-left: 1%;
         border: 0px solid blue;
         overflow: auto;
@@ -4042,6 +4049,11 @@ ul.icons{
     .mobile-row {
         display: none;
     }
+
+.fancybox-wrap{
+    top: 115px !important;
+}
+
      @media screen and (max-width: 479px) {
         .desktop-row {
             display: none;
@@ -4049,4 +4061,15 @@ ul.icons{
         .mobile-row {
             display: block;
         }
+        .fancybox-inner{
+            height: 65vh !important;
+        }
+        .fancybox-outer{
+            /*height: calc(100% - 120px) !important;*/
+        }
+
     }
+
+
+
+

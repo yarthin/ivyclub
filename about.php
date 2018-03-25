@@ -32,7 +32,7 @@
 				<div class="single-page-wrapper-2">
 					<div class="single-page-bg" data-animation-bg="inverse"></div>
 					
-					<div class="content-wrapper">
+					<div class="content-wrapper aboutPage">
 					
 						<div class="left-area half-area" data-animation-content="inverse">
 							<div class="writing-wrapper to-top delay-2" data-animation-down="to-top" data-animation-up="to-bottom">
@@ -63,7 +63,7 @@
 				<div class="single-page-wrapper-2">
 					<div class="single-page-bg" data-animation-bg="inverse"></div>
 					
-					<div class="content-wrapper">
+					<div class="content-wrapper aboutPage">
 						
 						<div class="team-container">
 						

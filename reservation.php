@@ -15,7 +15,7 @@ include('./include/header_meta.php')
 ?>
 	<link rel="canonical" href="https://www.ivyclub.ch/reservation" />
 <?php
-    include('./include/header.php')
+    include('./include/header_menu.php')
 ?>
 <?php
     include('./include/footer.php')
@@ -100,6 +100,9 @@ include('./include/header_meta.php')
 </body>
 </html>
 <link type="text/css" href="//fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<script>
+	
+</script>
 <?php
 $css = array(
     'jquery.pagepiling.min.css',

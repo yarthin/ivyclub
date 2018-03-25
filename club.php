@@ -27,7 +27,7 @@
 				<div class="single-page-wrapper-2">
 					<div class="single-page-bg" data-animation-bg="inverse"></div>
 					
-					<div class="content-wrapper">
+					<div class="content-wrapper clubPage">
 					
 						<div class="left-area half-area" data-animation-content="inverse">
 							<div class="writing-wrapper to-top delay-2" data-animation-down="to-top" data-animation-up="to-bottom">				
@@ -55,7 +55,7 @@
 									</p>
 								</div>
 								<div class="col-sm-12">
-									<a class="home-btn openframe" target="_blank" href="docs/corporate.pdf" data-fancybox-type="iframe"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
+									<a class="home-btn openframe" target="_blank" href="docs/pdfviewer/web/viewer.html" data-fancybox-type="iframe"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Broschüre</a>
 
 									<a rel="gallery" class="home-btn fancybox" href="docs/grundriss.jpg"><i class="fa fa-file-text-o" aria-hidden="true"></i> Grundrissplan</a>
 									
