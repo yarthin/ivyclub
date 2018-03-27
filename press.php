@@ -8,7 +8,6 @@
     <meta name="description" content="Zeitungsartikel von Blick, 20Min und weiteren Median. TV Beiträge von Pro7 und Sat1 Schweiz">
 	<meta name="keywords" content="Club, Club St.Gallen, Events, Party, Veranstaltung, Disco, Ausgang, Ausgang St.Gallen, Club Ostschweiz, Clubbing, Discothek, Firmenanlässe" />
 	<meta name="page-topic" content="Club, Club St.Gallen, Events, Party, Veranstaltung, Disco, Ausgang, Ausgang St.Gallen, Club Ostschweiz, Clubbing, Discothek, Firmenanlässe" />
-	<meta property="og:type" content="business.business">
 	<meta property="og:title" content="Presse - News aus aller Welt vom IVY Club St.Gallen">
 	<meta property="og:description" content="Zeitungsartikel von Blick, 20Min und weiteren Median. TV Beiträge von Pro7 und Sat1 Schweiz">
 <?php

@@ -2,29 +2,18 @@
 <html lang="en">
 <head>
     <title>IVY - club & events für ausgelassene Club Nächte in St.Gallen</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php
+    include('./include/header_meta.php')
+?>
     <meta name="description" content="Für alle, die eine stilvolle Atmosphäre für ausgelassene Club Nächte und Konzerte jeglicher Art mögen.">
-    <meta name="author" content="IVY - club & events">
     <meta name="content-language" content="de" />
-    <meta name="author" content="IVY - club & events" />
     <meta name="keywords" content="Club St.Gallen, Events St.Gallen, Veranstaltungen St.Gallen, Veranstaltung, Ausgang, Ausgang St.Gallen, Club Ostschweiz, Clubbing, Firmenanlässe Ostschweiz, Party" />
     <meta name="page-topic" content="Party, Club, Discothek, Events, Veranstaltung, Konzerte, ausgang, Live Musik, künstler, partyfotos" />
-    <meta property="og:type" content="business.business">
     <meta property="og:title" content="IVY - club & events stilvolle Atmosphäre für ausgelassene Club Nächte">
     <meta property="og:description" content="Für alle, die eine stilvolle und gediegene Atmosphäre für ausgelassene Club Nächte mit Internationalen Künstlern sowie Events und Konzerte jeglicher Art mögen.">
-    <meta property="og:url" content="https://www.ivyclub.ch">
-    <meta property="og:image" content="https://www.ivyclub.ch/image/logo_intro.png">
-    <meta property="fb:app_id" content="1104542262999578">
-    <meta property="business:contact_data:street_address" content="Bahnhofstrasse 10">
-    <meta property="business:contact_data:locality" content="St.Gallen">
-    <meta property="business:contact_data:region" content="St. Gallen">
-    <meta property="business:contact_data:postal_code" content="9000">
-    <meta property="business:contact_data:country_name" content="Switzerland">
-    <meta property="business:contact_data:email" content="welcome@ivyclub.ch">
-    <meta property="business:contact_data:website" content="https://www.ivyclub.ch/images/logo_intro.png">
-    <meta property="place:location:latitude" content="47.425747">
-    <meta property="place:location:longitude" content="9.732654">   
+<?php
+    include('./include/header_meta_og.php')
+?>
     <link rel="canonical" href="https://www.ivyclub.ch" />
 <?php
     include('./include/header.php')
@@ -207,7 +196,7 @@
 <?php
 $js = array(
        'fbintro-api.js',
-       'faba.min.js'
+       'faba.js'
 );
 foreach($js as $filename) {
 	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
@@ -219,7 +208,7 @@ foreach($js as $filename) {
 <?php
 $js = array(
        'insta.js',
-       'home.min.js'
+       'home.js'
 );
 foreach($js as $filename) {
 	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);

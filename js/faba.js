@@ -2084,6 +2084,8 @@
                 cache: true
             });
 
+
+  			if(navigator.userAgent.indexOf("Speed Insights") == -1)
             $.getScript('https://connect.facebook.net/en_US/sdk.js', function() {
                 FB.init({
                     appId: appID,

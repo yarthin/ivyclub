@@ -10,6 +10,7 @@ echo "</script>\n";
 	
 	
 ?>
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -21,14 +22,27 @@ echo "</script>\n";
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 // defer
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82822902-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<?php endif; ?>
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
 
-  gtag('config', 'UA-82822902-1');
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82822902-1"></script>
+<?php endif; ?>
+
+
+
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82822902-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+<?php endif; ?>
+<?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
+
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -41,6 +55,8 @@ echo "</script>\n";
   fbq('init', '273952083142088');
   fbq('track', 'PageView');
 </script>
+<?php endif; ?>
+
 </head>
 <body>
     <div class="css-loader">
