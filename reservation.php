@@ -15,8 +15,9 @@ include('./include/header_meta.php')
 ?>
 	<link rel="canonical" href="https://www.ivyclub.ch/reservation" />
 <?php
-    include('./include/header_menu.php')
+    include('./include/header_res.php')
 ?>
+
 <?php
     include('./include/footer.php')
 ?>	
@@ -109,7 +110,8 @@ $css = array(
     'material-design-iconic-font.min.css',
     'pe-icon-7-stroke.css',
     'swiper.min.css',
-
+    'jquery.fancybox.min.css'
+    
 );
 
 foreach($css as $filename) {
@@ -164,7 +166,7 @@ $js = array(
     
     'swiper.jquery.min.js',
     'jquery.pagepiling.min.js',
-
+    'jquery.fancybox.pack.js',
     'scripts.min.js',
     'moment.min.js',
     'pikaday.min.js',

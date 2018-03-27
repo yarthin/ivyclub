@@ -207,7 +207,7 @@
 <?php
 $js = array(
        'fbintro-api.js',
-       'faba.js'
+       'faba.min.js'
 );
 foreach($js as $filename) {
 	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
@@ -219,7 +219,7 @@ foreach($js as $filename) {
 <?php
 $js = array(
        'insta.js',
-       'home.js'
+       'home.min.js'
 );
 foreach($js as $filename) {
 	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);

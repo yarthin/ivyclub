@@ -74,8 +74,18 @@
 <?php
     include('./include/js_lib.php')
 ?>
-<script src="js/fbphoto-api.js" defer></script>
-<script src="js/faba.js" defer></script>
+
+<?php
+$js = array(
+       'fbphoto-api.js',
+       'faba.min.js'
+);
+foreach($js as $filename) {
+	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
+	echo "<script src='/js/$filename?$filemtime' defer>\n";
+	echo "</script>\n";
+}
+?>
 <script>
 $(document).ready(function() {
 	var options = '<option value="" selected>Bitte wählen</option>';

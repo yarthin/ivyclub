@@ -1,13 +1,11 @@
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <?php
 $filemtime = filemtime(dirname(__FILE__) . '/../css/styles.min.css');
-echo "<link type='text/css' href='css/styles.css?$filemtime' rel='stylesheet'/>\n";
+echo "<link type='text/css' href='css/styles.min.css?$filemtime' rel='stylesheet'/>\n";
 	
 $filemtime = filemtime(dirname(__FILE__) . '/../js/jquery.min.js');
 echo "<script src='js/jquery.min.js?$filemtime'>\n";
 echo "</script>\n";	
-	
-	
 ?>
 <script>
     (function(h,o,t,j,a,r){
@@ -29,9 +27,7 @@ echo "</script>\n";
   gtag('config', 'UA-82822902-1');
 </script>
 </head>
-<body>    
-    <?php include('./include/subReservation.php'); ?>
-    
+<body>        
     <div id = 'header' >
         <nav>
             <div class="logo">

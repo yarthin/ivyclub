@@ -52,9 +52,7 @@ echo "</script>\n";
         <span>N</span>
         <span>G</span>
     </div>
-    
-    <?php include('./include/subReservation.php'); ?>
-    
+        
     <div id = 'header' >
         <nav>
             <div class="logo">
