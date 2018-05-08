@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Reservationen - Für alle die das volle IVY-Erlebnis geniessen möchten</title>
+	<title>Friendlist</title>
 <?php
 include('./include/header_meta.php')
 ?>
@@ -13,14 +13,11 @@ include('./include/header_meta.php')
 <?php
     include('./include/header_meta_og.php')
 ?>
-	<link rel="canonical" href="https://www.ivyclub.ch/reservation" />
+	<link rel="canonical" href="https://www.ivyclub.ch/list" />
 <?php
-    include('./include/header_res.php')
+    include('./include/header_list.php')
 ?>
 
-<?php
-    include('./include/footer.php')
-?>	
 	<div id="pagepiling" >
 	
 		<div class="single-page contact-area" id="section-12-ab">
@@ -31,11 +28,11 @@ include('./include/header_meta.php')
 					
 						<div class="left-area half-area" data-animation-content="inverse">
 							<div class="writing-wrapper to-top delay-2" data-animation-down="to-top" data-animation-up="to-bottom">
-								<h1 class="heading reservHeading"><b>RESERVATION</b></h1>
+								<h1 class="heading reservHeading"><b>FRIENDLIST</b></h1>
 								<div class="address">
-									<h3 class="title">Be a Part</h3>
+									<h3 class="title">Bla Bla</h3>
 									<h6 class="desc">
-										Für alle, die am Wochenende ihre Füsse nicht stillhalten können und das volle IVY-Erlebnis geniessen möchten: </h6><br/>
+										Für schmarotzer :)</h6><br/>
 								</div>
 
 							</div>
@@ -48,11 +45,6 @@ include('./include/header_meta.php')
 										<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
 										
 										<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
-										
-										<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
-							
-										<input id="telno" name="Telefon" type="tel" placeholder="Telefon" class="form-control" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="birthday" name="Geburtstdatum" class="form-control" placeholder="Geburtstdatum" aria-invalid="true" required="" aria-label="Benutze die Maske um ein Datum zu wählen">
 										
 										<select name="subject" id="subject" class="form-control" aria-invalid="true" required >
 											<option value="" >Event wählen</option>
@@ -68,24 +60,8 @@ include('./include/header_meta.php')
 											<?php } ?>
 										</select>
 										<input type = 'hidden' id= 'event_txt' name = 'event_txt' >
-										<input type="text" aria-required="true" id="redate" name="Anderes Datum" class="form-control" placeholder="Anderes Datum" aria-invalid="true" required="" aria-label="Benutze die Maske um ein Datum zu wählen">
-										<!-- input type="text" aria-required="true" id="people_num" name="people_num" class="form-control" placeholder="Anzahl Person" aria-invalid="true" required  maxlength="15" pattern="\d*" --> 
-										<select name="people_num" id="people_num" class="form-control" label="Vorname" aria-invalid="true" required >
-							                <option value="" selected>Anzahl Person</option> 
-							                <option value="5" >Anzahl Person : 5</option> 
-							                <option value="10" >Anzahl Person : 10</option> 
-							                <option value="15" >Anzahl Person : 15</option> 
-							                <option value="20" >Anzahl Person : 20</option> 
-							                <option value="25" >Anzahl Person : 25</option> 
-							                <option value="30" >Anzahl Person : 30</option> 
-							                <option value="35" >Anzahl Person : 35</option> 
-							                <option value="40" >Anzahl Person : 40</option> 
-							                <option value="45" >Anzahl Person : 45</option> 
-							                <option value="50" >Anzahl Person : 50</option> 
-							                
-							            </select>
-							
-										<button class="submit-btn" type="submit" id="submit">Jetzt Reservieren <i class="zmdi zmdi-long-arrow-right"></i></button>
+										
+										<button class="submit-btn" type="submit" id="submit">Eintragen <i class="zmdi zmdi-long-arrow-right"></i></button>
 							
 										</form>
 						
@@ -112,6 +88,3 @@ include('./include/header_meta.php')
 		});
 	});
 </script>
-<?php
-    include('./include/structure.php')
-?>

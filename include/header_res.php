@@ -2,7 +2,7 @@
 
 <?php
 $filemtime = filemtime(dirname(__FILE__) . '/../css/styles.css');
-echo "<link type='text/css' href='css/styles.min.css?$filemtime' rel='stylesheet'/>\n";
+echo "<link type='text/css' href='css/styles.css?$filemtime' rel='stylesheet'/>\n";
 	
 $filemtime = filemtime(dirname(__FILE__) . '/../js/jquery.min.js');
 echo "<script src='js/jquery.min.js?$filemtime'>\n";

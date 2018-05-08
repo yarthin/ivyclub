@@ -67,7 +67,7 @@ var swiper = new Swiper('.swiper-container', {
 
  });
 
- loadSliderJsonData();
+ //loadSliderJsonData();
 
  $('[data-toggle=projects]').on('click', function() {
 
@@ -164,9 +164,10 @@ function closeProjects() {
 
 }
 
-function loadSliderJsonData() {
+function loadSliderJsonData__() {
+  console.log( 'temp-data' );
  $.getJSON('include/calendar.php', function(data) {
-  //console.log(data);
+  console.log(data, 'temp-data' );
   data = data.reverse();
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   for (var i = 0; i < data.length; i++) {

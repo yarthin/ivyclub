@@ -36,6 +36,7 @@ if ($year_after) {
 $access_token = "226601451024177|1_YwHxuKJTfz4e8_6Sz-zGtUtpg";
 $fields = "id,name,description,place,timezone,start_time,end_time,cover";
 $json_link = "https://graph.facebook.com/{$fb_page_id}/events/attending/?fields={$fields}&access_token={$access_token}&since={$since_date}&until={$until_date}&limit=1000";
+echo "events page json link-----------".$json_link;
 // $json = file_get_contents($json_link);
 $json = curl_get_contents($json_link);
 

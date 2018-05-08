@@ -3,6 +3,45 @@ jQuery(document).ready(function(){
 	$('#contactform').submit(function(){
 
 		var action = $(this).attr('action');
+		console.log($('#firstname').val());
+
+		$("#message").slideUp(750,function() {
+			$('#message').hide();
+
+	 		$('#submit')
+				.after('<img src="../images/loader.png" class="loader" />')
+				.attr('disabled','disabled');
+
+			$.post(action, {
+					firstname: $('#firstname').val(),
+					lastname: $('#lastname').val(),
+					email: $('#email').val(),
+					phone: $('#phone').val(),
+					subject: $('#subject').val(),
+					comments: $('#comments').val(),
+					verify: $('#verify').val()
+				},function(data){
+					document.getElementById('message').innerHTML = data;
+					$('#message').slideDown('slow');
+					$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+					$('#submit').removeAttr('disabled');
+					if(data.match('success') != null) $('#contactform').slideUp('slow');
+
+				}
+			);
+
+		});
+
+		return false;
+
+	});
+
+});
+jQuery(document).ready(function(){
+
+	$('#friendlistformdirect').submit(function(){
+
+		var action = $(this).attr('action');
 
 		$("#message").slideUp(750,function() {
 		$('#message').hide();
@@ -13,18 +52,15 @@ jQuery(document).ready(function(){
 
 		$.post(action, {
 				firstname: $('#firstname').val(),
-				lastname: $('#lastname').val(),
-				email: $('#email').val(),
-				phone: $('#phone').val(),
-				subject: $('#subject').val(),
-				comments: $('#comments').val(),
-				verify: $('#verify').val()
+				lastname: $('#lastname').val(),				
+				subject: $('#subject').val()
+				
 			},function(data){
 				document.getElementById('message').innerHTML = data;
 				$('#message').slideDown('slow');
-				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+				$('#friendlistformdirect img.loader').fadeOut('slow',function(){$(this).remove()});
 				$('#submit').removeAttr('disabled');
-				if(data.match('success') != null) $('#contactform').slideUp('slow');
+				if(data.match('success') != null) $('#friendlistformdirect').slideUp('slow');
 
 			}
 		);
@@ -91,26 +127,26 @@ jQuery(document).ready(function(){
 				.attr('disabled','disabled');
 
 			$.post(action, {
-				firstname: $('#firstname').val(),
-				lastname: $('#lastname').val(),
-				email: $('#email').val(),
-				birthday: $('#birthday').val(),
-				telno: $('#telno').val(),
-				event_id: $('#subject').val(),
-				event_txt: $('#event_txt').val(),
-				people_num: $('#people_num').val(),
-			},
-				function(data){
-					var data = JSON.parse(data); 
-					document.getElementById('message').innerHTML = data.msg;
-					$('#message').slideDown('slow');
-					$('#reservationformdirect img.loader').fadeOut('slow',function(){$(this).remove()});
-					$('#submit').removeAttr('disabled');
-					//if(data.match('success') != null) 
-						$('#reservationformdirect').slideUp('slow');
+						firstname: $('#firstname').val(),
+						lastname: $('#lastname').val(),
+						email: $('#email').val(),
+						birthday: $('#birthday').val(),
+						telno: $('#telno').val(),
+						event_id: $('#subject').val(),
+						event_txt: $('#event_txt').val(),
+						people_num: $('#people_num').val(),
+					},
+					function(data){
+						var data = JSON.parse(data); 
+						document.getElementById('message').innerHTML = data.msg;
+						$('#message').slideDown('slow');
+						$('#reservationformdirect img.loader').fadeOut('slow',function(){$(this).remove()});
+						$('#submit').removeAttr('disabled');
+						//if(data.match('success') != null) 
+							$('#reservationformdirect').slideUp('slow');
 
-				}
-		);
+					}
+			);
 
 		});
 

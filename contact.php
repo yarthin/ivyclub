@@ -15,7 +15,7 @@
 ?>
 	<link rel="canonical" href="https://www.ivyclub.ch/contact" />
 <?php
-    include('./include/header.php')
+    include('./include/header-contact.php')
 ?>
 
 <?php
@@ -61,18 +61,18 @@
 										<form method="post" action="include/contact.php" name="contactform" id="contactform">
 							
 										
-										<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
-										
-										<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
-										
-										<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
-										
-										<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
-							
-										<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" style="width: 100%; height: 120px" placeholder="Mitteilung"></textarea>
-							
-							
-										<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
+											<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
+								
+											<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" style="width: 100%; height: 120px" placeholder="Mitteilung"></textarea>
+								
+								
+											<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
 										</form>
 									</div>
 							</div>

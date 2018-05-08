@@ -174,7 +174,7 @@
 <?php
 $js = array(
        'insta.js',
-       'home.js'
+       'home.min.js'
 );
 foreach($js as $filename) {
 	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);

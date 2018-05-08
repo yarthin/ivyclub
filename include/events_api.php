@@ -21,3 +21,5 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
 $resultRaw = curl_exec($ch);
 $result = simplexml_load_string($resultRaw);
 $result_json = json_decode(json_encode($result), true);
+
+//print_r($result_json);

@@ -3590,7 +3590,7 @@ ul.icons{
      left: 0!important;
      padding: 10px;
 }
- #section-5 .fb-album:nth-child(6),#section-5 .fb-album:nth-child(4),#section-5 .fb-album:nth-child(5),#section-5 .fb-album:nth-child(7) {
+ #section-5 .fb-album:nth-child(6),#section-5 .fb-album:nth-child(4),#section-5 .fb-album:nth-child(5),#section-5 .fb-album:nth-child(7) ,#section-5 .fb-album:nth-child(8) {
      display: none!important;
 }
  .fb-album .imgdiv {

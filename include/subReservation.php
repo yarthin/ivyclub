@@ -49,14 +49,14 @@
     //include_once("./events_api.php");
  ?>
 <script >
-    
+ /*   
 jQuery(function(){
     jQuery('#my-contact-div').contactable(
     {
         recievedMsg : 'Vielen Dank für deine Reservation, du bekommst eine Bestätigung von uns.',
         hideOnSubmit: true
     });
-});
+});*/
 
 $(document).ready(function() {
     var options = '<option value="" selected>Bitte wählen</option>';
@@ -70,12 +70,12 @@ $(document).ready(function() {
         //options += '<option value="<?php echo $value; ?>"><?php echo $value; ?></option>';
     <?php } ?>
     $("select#subject").html(options);	
-	$('#subject').select2({
+/*	$('#subject').select2({
         minimumResultsForSearch: 1
     });
     $('#people_num').select2({
         minimumResultsForSearch: 1
-    });
+    });*/
 
 	$("#anderes_datum").show();
 	$("#subject").change(function() {

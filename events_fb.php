@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Events - There is always a reason to Celebrate!</title>
 <?php
@@ -100,58 +101,26 @@
 	</div><!-- pagePile -->
 </body>
 </html>
-
     <?php
         include('./include/js_lib.php')
-    ?>   
-
-<style> 
-  div.xx img{
-    width: 100%;
-    height: 150px;
-  }
-</style>
+    ?>    
 <script>
-
-
-  $(document).ready(function() {
-	      var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        var i = 0 ;
-           <?php foreach($result_json['event'] as $evt) { ?>
-              <?php 
-              $startdate = explode(" ", $evt["startdate"])[0];
-              $startdate_arr = explode("-", $startdate);
-              $value = $evt["name"]." - ".$startdate_arr[2]."-".$startdate_arr[1]."-".$startdate_arr[0]; 
-              if(isset($evt['flyers']['flyer'])){
-                  $img_url = "https://bliss.clubzone.ch/public/flyer/image?url=".$evt['flyers']['flyer'];  
-              }
-              else{
-                  $img_url = "https://graph.facebook.com/".$evt["facebook_id"]."/picture?type=large";  
-              }
-              
-              
-              ?>
-              var html = 	'<div class="xx" data-animation-down="to-top" data-animation-up="to-bottom">' +
-      			    '	<img src="<?php echo $img_url; ?>" alt="about Image" />' +
-      			    '</div>' +
-      			    '<div class="x" data-animation-down="to-top" data-animation-up="to-bottom">' +
-      			    '	<div class="right-area-wrapper">' +
-      			    '		<h2 class="title-event"><b><?php echo $evt["name"]; ?></b></h2>' +
-      			    '		<p class=""><?php echo $value; ?></p>' +
-      			    
-      			    '	</div>' +
-      			    '</div>';
-
-                if (w > 479) {
-                  $('#subslide_' + i).append(html);
-                 } else {
-                  $('#subslideM_' + i).append(html);
-                 }
-                 ++ i ;
-      	   <?php } ?>
-      	   
-   });
-
+$(document).ready(function() {
+	var options = '<option value="" selected>Event wählen</option>';
+	<?php foreach($result_json["event"] as $evt) { ?>
+		<?php 
+		$startdate = explode(" ", $evt["startdate"])[0];
+		$startdate_arr = explode("-", $startdate);
+		$value = $evt["name"]." - ".$startdate_arr[2]."-".$startdate_arr[1]."-".$startdate_arr[0]; 
+		?>
+		options += '<option value="<?php echo $value; ?>"><?php echo $value; ?></option>';
+	<?php } ?>
+	$("select#subject").html(options);
+	/*
+	$('#subject').select2({
+		minimumResultsForSearch: 1
+	});*/
+});
 </script>
 <?php
     include('./include/structure.php')

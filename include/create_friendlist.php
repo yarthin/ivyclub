@@ -11,12 +11,14 @@ function isEmail($email) {
 
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
-$firstname     = $_POST['firstname'];
+$firstname    = $_POST['firstname'];
 $lastname     = $_POST['lastname'];
-$email    = $_POST['email'];
-$birthday    = $_POST['birthday'];
-$telno    = $_POST['telno'];
-$event_id    = $_POST['event_id'];
+//$email        = $_POST['email'];
+//$birthday     = $_POST['birthday'];
+//$telno        = $_POST['telno'];
+$event_id     = 191; //$_POST['subject'];
+$event_txt    = $_POST['event_txt'];
+//$people_num   = $_POST['people_num'];
 
 
 if(trim($firstname) == '') {
@@ -25,122 +27,93 @@ if(trim($firstname) == '') {
 } else if(trim($lastname) == '') {
 	echo '<div class="error_message">Fehler! Nachname fehlt.</div>';
 	exit();
-} else if(trim($email) == '') {
+}/* else if(trim($email) == '') {
 	echo '<div class="error_message"Fehler! E-Mail Adresse ist ungültig.</div>';
 	exit();
 } else if(!isEmail($email)) {
 	echo '<div class="error_message">Fehler! E-Mail Adresse ist ungültig, bitte nochmals versuchen.</div>';
 	exit();
-}
+}*/
 
-
-// Configuration option.
-// Enter the email address that you want to emails to be sent to.
-// Example $address = "joe.doe@yourdomain.com";
-
-//$address = "example@themeforest.net";
 $address = "daniel@ivyclub.ch";
-
-
-// Configuration option.
-// i.e. The standard subject will appear as, "You've been contacted by John Doe."
-
-// Example, $e_subject = '$name . ' has contacted you via Your Website.';
-
-$e_subject = 'Nachricht via ivyclub.ch von: ' . $firstname . ' ' . $lastname . '';
-
-
-// Configuration option.
-// You can change this if you feel that you need to.
-// Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
+/*
+$e_subject = 'Reservation via ivyclub.ch von: ' . $firstname . ' ' . $lastname . '';
 
 $e_content = "Name: $firstname $lastname" . PHP_EOL . PHP_EOL;
 $e_reply = "E-Mail: $email". PHP_EOL . PHP_EOL;
-$c_reply = "Telefon: $phone ". PHP_EOL . PHP_EOL;
-$e_body = "Nachricht: $comments" . PHP_EOL . PHP_EOL;
+$c_reply = "Telefon: ".$telno." ". PHP_EOL . PHP_EOL;
+$e_body = "Nachricht: ".$event_txt." ". PHP_EOL . PHP_EOL;
+$num_body = "Anzahl Person: ".$people_num." ". PHP_EOL . PHP_EOL;
 
-
-$msg = wordwrap( $e_content . $e_reply . $c_reply . $e_body, 70 );
+$msg = ( $e_content . $e_reply . $c_reply . $e_body . $num_body );
 
 $headers = "From: $email" . PHP_EOL;
 $headers .= "Reply-To: $email" . PHP_EOL;
 $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
-$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
-
+$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;*/
+/*
 if(mail($address, $e_subject, $msg, $headers)) {
 
-	// Email has sent successfully, echo a success page.
+  $event_txt_leng = strlen($event_txt);
+  $disp_date  = substr($event_txt, ($event_txt_leng-10), $event_txt_leng);
+  $disp_date  = str_replace('-', '.', $disp_date);
+  $disp_txt   = substr($event_txt, 0, ($event_txt_leng-10));
 
-	echo "<div id='success_page'>";
-	echo "<h1>Reservation verschickt.</h1>";
-	echo "<p>Vielen Dank <strong>$firstname</strong> <strong>$lastname</strong>, wir haben deine Nachricht erhalten und melden uns umgehend bei dir.</p>";
-	echo "</div>";
+  $data['msg'] = "<div id='success_page'> <h1>Reservation erhalten.</h1><p>Vielen Dank <strong>$firstname</strong> <strong>$lastname</strong> für deine Reservation am <strong>$disp_date - $disp_txt</strong> Event wir melden uns bei dir.</p></div>";
+  $data['response'] = 'success' ;
+  echo json_encode($data);
 
 } else {
 
 	echo 'Fehler! Bitte wende dich an <a href="mailto:info@ivyclub.ch">info@ivyclub.ch</a>';
 
 }
-
+*/
 $clubzone_apikey = "d6a1d42cf04ac66a29283176d84b4028";
 
-$clubzone_host = "http://api.clubzone.ch";
-$createCustomer = $clubzone_host . "/customer/create";
-$createLoungereservation = $clubzone_host . "/lounge/addreservation";
+$clubzone_host = "https://bliss.clubzone.ch";
+$createCustomer = $clubzone_host . "/guestlist/entry/update";
+//$createLoungereservation = $clubzone_host . "/lounge/addreservation";
 
 $data = [
-    "apikey" => $clubzone_apikey,
-    "format" => "xml",
+//    "apikey" => $clubzone_apikey,
+//    "format" => "xml",
     "firstname" => $firstname,
-    "lastname" => $laststname,
-    "email" => $email,
-    "birthday" => $birthday,
-    "telno" => $telno,
-    "event_id " => $event_id ,
+    "lastname" => $lastname
+//    "email" => $email,
+//    "birthday" => $birthday,
+//    "telno" => $telno,
+//    "event_id " => $event_id ,
+//    "id " => $event_id 
+//    "event_txt " => $event_txt 
+//    "numguests" => $people_num 
 ];
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $createCustomer);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_POST, count($data));
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+//curl_setopt($ch, CURLOPT_POST, count($data));
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 $resultRaw = curl_exec($ch);
-$result = simplexml_load_string($resultRaw);
+//$result = simplexml_load_string($resultRaw);
 
-/* comment here */
-/* printResult($ch, $result, $data); */
 
 assertHttpStatusCode($ch, 200);
 
-/* curl -X POST \
-  https://api.sparkpost.com/api/v1/transmissions \
-  -H "Authorization: 5471c8fadfc48f52c0897a069b552616ebf3a858" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "options": {
-      "sandbox": true
-    },
-    "content": {
-      "from": "sandbox@sparkpostbox.com",
-      "subject": "Thundercats are GO!!!",
-      "text": "Sword of Omens, give me sight BEYOND sight"
-    },
-    "recipients": [{ "address": "daniel@ivyclub.ch" }]
-}' */
 
 curl_close($ch);
-
+/*
 $id = (string) $result->customer["id"];
-
-echo "<div id='success_page'><h1>Reservation erhalten.</h1><p>\nVielen Dank {$firstname} {$lastname} wir haben deine Reservation erhalten.\n</p></div>";
 
 $data = [
     "apikey" => $clubzone_apikey,
     "format" => "xml",
     'customer_id' => $id,
     'lounge_condition_id' => 1,
-    'event_id' => $event_id 
+    'event_id' => $event_id ,
+    "numguests" => $people_num 
 ];
 
 $ch = curl_init();
@@ -150,14 +123,8 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 curl_exec($ch);
 
-$resultRaw = curl_exec($ch);
-$result = simplexml_load_string($resultRaw);
-
-/* comment here */
-/* printResult($ch, $result, $data); */
-
 assertHttpStatusCode($ch, 200);
-
+*/
 function assertHttpStatusCode($ch, $statusCode)
 {
     assert(curl_getinfo($ch)["http_code"] == $statusCode);

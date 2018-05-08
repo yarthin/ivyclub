@@ -15,9 +15,19 @@
     include('./include/header_meta_og.php')
 ?>
     <link rel="canonical" href="https://www.ivyclub.ch" />
+
 <?php
     include('./include/header.php')
 ?>
+
+	<div class="btn-sign">
+     <h2><a href="#login-box" class="login-window"></a></h2>
+
+	</div>
+	<div id="login-box" class="login-popup"> <a href="#" class="close"><img src="images/close.png" class="btn_close" title="Close Window" alt="Close" /></a>
+        <a class="event-btn" href="geazy"><img class="" src="images/event-intro.jpg" alt="Event Banner"></a>
+    </div>
+
     <div class="page-nav-area">
         <a class="prev" href="#" data-slider-nav="prev"><i class="pe-7s-play"></i></a>
         <a class="next" href="#" data-slider-nav="next"><i class="pe-7s-play"></i></a>
@@ -52,7 +62,9 @@
                             <a class="home-btn go-ss-2" href="">Upcoming Events</a>
                             <a class="home-btn go-ss-3" href="">Latest Pictures</a>
                             <a class="home-btn" href="club">Private Hire</a>
-                        <div id="instafeed-gallery-feed" class="insta insta-gallery"></div>
+                        </div>
+                        <div class="to-bottom delay-4" data-animation-up="to-bottom" data-animation-down="to-top">
+                            <a class="event-btn-intro" href="geazy"><img class="" src="images/event-intro.jpg" alt="Event Banner"></a>
                         </div>
                     </div>
                 </div>
@@ -171,18 +183,27 @@
                         </div>
                         <div class="right-area half-area" data-animation-bg="inverse">
                             <div class="writing-wrapper">
-                                   <div class="contact-form">
-										<div id="message"></div>
-										<form method="post" action="include/contact.php" name="contactform" id="contactform">							
-										<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
-										<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
-										<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" placeholder="Mitteilung"></textarea>
-										<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                  <div class="contact-form">
+									<div id="message"></div>
+			
+										<form method="post" action="include/contact.php" name="contactform" id="contactform">
+							
+										
+											<input type="text" aria-required="true" id="firstname" name="firstname" class="form-control" placeholder="Vorname" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="lastname" name="lastname" class="form-control" placeholder="Nachname" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="email" name="email" class="form-control" placeholder="E-Mail" aria-invalid="true" required >
+											
+											<input type="text" aria-required="true" id="phone" name="phone" class="form-control" placeholder="Telefon" aria-invalid="true" required >
+								
+											<textarea name="comments" aria-required="true" cols="40" rows="3" class="form-control comments" id="comments" style="width: 100%; height: 120px" placeholder="Mitteilung"></textarea>
+								
+								
+											<button class="submit-btn" type="submit" id="submit">Senden <i class="zmdi zmdi-long-arrow-right"></i></button>
 										</form>
 									</div>
-									</div>
+							</div>
                                 </div>
                             </div>
                         </div>
@@ -193,32 +214,44 @@
 <?php
     include('./include/js_lib.php')
 ?>
+<script>
+// Getting the variable's value from a link 
+var loginBox = $('.login-window').attr('href');
+
+//Fade in the Popup and add close button
+$(loginBox).fadeIn(300);
+
+//Set the center alignment padding + border
+var popMargTop = ($(loginBox).height() + 24) / 2;
+var popMargLeft = ($(loginBox).width() + 24) / 7;
+
+$(loginBox).css({
+    'margin-top': -popMargTop,
+        'margin-left': -popMargLeft
+});
+
+// Add the mask to body
+$('body').append('<div id="mask"></div>');
+$('#mask').fadeIn(300);
+
+
+
+// When clicking on the button close or the mask layer the popup closed
+$('a.close, #mask').on('click', function () {
+    $('#mask , .login-popup').fadeOut(300, function () {
+        $('#mask').remove();
+    });
+    return false;
+});
+</script>
 <?php
-$js = array(
-       'fbintro-api.js',
-       'faba.js'
-);
-foreach($js as $filename) {
-	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
-	echo "<script src='/js/$filename?$filemtime' defer>\n";
-	echo "</script>\n";
-}
+    include('./include/clubzone_events.php')
 ?>
-<script src="//cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+
 <?php
-$js = array(
-       'insta.js',
-       'home.js'
-);
-foreach($js as $filename) {
-	$filemtime = filemtime(dirname(__FILE__) . '/js/' . $filename);
-	echo "<script src='/js/$filename?$filemtime' defer>\n";
-	echo "</script>\n";
-}
+    include('./include/js_lib_home.php')
 ?>
-<?php
-    include('./include/structure.php')
-?>
+
 <script type="application/ld+json">
 { "@context": "http://schema.org",
   "@type": "Product",
